@@ -1,0 +1,224 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+
+.wrapper {
+  margin: 0px auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+nav {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+}
+
+.burgerMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.burgerMenu button,
+.burgerMenu i {
+  font-size: 2em;
+  padding: 0.75rem 1.2rem;
+  border: none;
+  background: transparent;
+  color: white;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.burgerMenu a {
+  font-size: 1.5rem;
+  padding: 0rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+.hide {
+  display: none;
+}
+
+ul {
+  position: absolute;
+  top: 0;
+  left: 200%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #4b122c;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.01, 0.65, 0.38, 0.9);
+  transition: -webkit-transform 0.8s cubic-bezier(0.01, 0.65, 0.38, 0.9);
+  transition: transform 0.8s cubic-bezier(0.01, 0.65, 0.38, 0.9);
+  transition: transform 0.8s cubic-bezier(0.01, 0.65, 0.38, 0.9), -webkit-transform 0.8s cubic-bezier(0.01, 0.65, 0.38, 0.9);
+}
+
+ul li {
+  margin: 1.5em;
+  list-style: none;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.showOptions {
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+}
+
+.heroImg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/hero1920.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.heroBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.heroText {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+
+.heroText h1 {
+  margin-bottom: 1em;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.heroText p {
+  font-size: 1.8rem;
+}
+
+.language {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100vh;
+}
+
+.language .circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 40%;
+  background-color: yellow;
+  margin: 1em 1em;
+  z-index: 2;
+  background-size: cover;
+  background-position: center;
+  -webkit-box-shadow: 2px 2px 5px black;
+          box-shadow: 2px 2px 5px black;
+  cursor: pointer;
+}
+
+.language .flages {
+  background-image: url("../img/Flag_of_Spain.png");
+}
+
+.language .flagpl {
+  background-image: url("../img/poland.png");
+}
+
+.language .flagen {
+  background-image: url("../img/United_Kingdom.png");
+}
+
+@media (min-width: 768px) {
+  .burgerMenu a {
+    font-size: 2.2rem;
+  }
+  ul > li {
+    font-size: 3rem;
+  }
+  .heroText h1 {
+    font-size: 4rem;
+  }
+  .heroText p {
+    font-size: 2.2rem;
+  }
+  .circle {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (min-width: 992px) {
+  .burgerMenu a {
+    font-size: 2.7rem;
+  }
+  ul > li {
+    font-size: 3.4rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
