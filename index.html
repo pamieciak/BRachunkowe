@@ -29,29 +29,70 @@
                 <li><a href="aboutme">O mnie</a></li>
                 <li><a href="services">Usługi</a></li>
                 <li><a href="prices">Cennik</a></li>
-                <li><a href="contact">Kontakt</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <div class="language">
+                    <div class="circle flagen"></div>
+                    <div class="circle flagpl"></div>
+                    <div class="circle flages"></div>
+                </div>
             </ul>
 
         </div>
     </nav>
 
     <header>
-
         <div class="heroImg">
             <div class="heroBg"></div>
             <div class="heroText">
-            <h1>Biuro rachunkowe Żaneta Ziółkowska</h1>
-            <p>tutaj pomysł na jakieś hasło </p>
-            </div>
-            <div class="language">
-            <div class="circle flagen"></div>
-            <div class="circle flagpl"></div>
-            <div class="circle flages"></div>
+                <h1>Biuro rachunkowe Żaneta Ziółkowska</h1>
+                <p>tutaj pomysł na jakieś hasło </p>
             </div>
         </div>
-        </div>
-
     </header>
+
+    <main>
+        <section id="contact">
+
+            <div class="contact wrapper">
+                <div class="contactForm">
+                    <form>
+                        <label for="username">Podaj imię i nazwisko:</label>
+                        <input type="text" id="username"  placeholder="Podaj swoje dane">
+                        <label for="">Podaj adres e-mail:</label>
+                        <input type="email" placeholder="wpisz swój adres e-mail">
+                        <label for="case">W jakiej sprawie piszesz?</label>
+                        <select name="" id="case">
+                            <option value="choose" disabled selected>- wybierz sprawę -</option>
+                            <option value="Księgi Rachunkowe">Księgi Rachunkowe</option>
+                            <option value="Książka przychodów i pozchodów">Książka przychodów i Rozchodów</option>
+                            <option value="Ryczałt">Ryczałt</option>
+                            <option value="Kadry i Płace">Kadry i Płace</option>
+                        </select>
+                        <label for="textarea">Masz pytania? Napisz:</label>
+                        <textarea name="" id="textarea" rows="10" placeholder="napisz treść wiadomości"></textarea>
+                        <button type="submit">Wyślij</button>
+                    </form>
+                </div>
+                <div class="adress">
+                    <div class="adresInfo">
+                        <h2>Kontakt</h2>
+                        <a href="tel:+48504304414">tel: 504 304 414</a>
+                        <p>Adres:</p>
+                        <p>ul. Zmyślona 6</p>
+                        <p>00-000 Gdańsk</p>
+                    </div>
+                    <div class="adressMap">
+                        <p>Mapa dojazdu</p>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d297572.61599358317!2d18.409170455564574!3d54.36076137898397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd731c14d4fa6f%3A0x9bb9fbf163b7be8d!2zR2RhxYRzaw!5e0!3m2!1spl!2spl!4v1642508478748!5m2!1spl!2spl"
+                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
 
     <script src="./js/script.js"></script>
 </body>

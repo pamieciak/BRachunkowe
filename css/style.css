@@ -7,11 +7,11 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
-  overflow: hidden;
 }
 
 .wrapper {
@@ -64,7 +64,7 @@ nav {
 ul {
   position: absolute;
   top: 0;
-  left: 200%;
+  left: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,8 +101,47 @@ ul li a {
 }
 
 .showOptions {
-  -webkit-transform: translateX(-200%);
-          transform: translateX(-200%);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.language {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  right: 0;
+}
+
+.language .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 40%;
+  background-color: yellow;
+  margin: 1em 1em;
+  z-index: 2;
+  background-size: cover;
+  background-position: center;
+  -webkit-box-shadow: 2px 2px 5px black;
+          box-shadow: 2px 2px 5px black;
+  cursor: pointer;
+}
+
+.language .flages {
+  background-image: url("../img/Flag_of_Spain.png");
+}
+
+.language .flagpl {
+  background-image: url("../img/poland.png");
+}
+
+.language .flagen {
+  background-image: url("../img/United_Kingdom.png");
+}
+
+header {
+  overflow: hidden;
 }
 
 .heroImg {
@@ -155,43 +194,138 @@ ul li a {
   font-size: 1.8rem;
 }
 
-.language {
+.contact {
+  margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.language .circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 40%;
-  background-color: yellow;
-  margin: 1em 1em;
-  z-index: 2;
-  background-size: cover;
-  background-position: center;
-  -webkit-box-shadow: 2px 2px 5px black;
-          box-shadow: 2px 2px 5px black;
+.contact .contactForm {
+  width: 100%;
+  margin: 2em;
+}
+
+.contact .contactForm form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2em auto;
+}
+
+.contact .contactForm form label {
+  font-size: 2rem;
+  margin: 0.5em 1em;
+}
+
+.contact .contactForm form input,
+.contact .contactForm form select,
+.contact .contactForm form textarea {
+  width: 80%;
+  height: 60px;
+  padding: 0.6em;
+  font-size: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.178);
+  border-radius: 8px;
+}
+
+.contact .contactForm form select {
+  text-align: center;
+}
+
+.contact .contactForm form textarea {
+  max-width: 80%;
+  min-width: 80%;
+  width: 100%;
+  min-height: 150px;
+}
+
+.contact .contactForm form button {
+  margin-top: 1em;
+  width: 200px;
+  padding: 0.5em 1em;
+  color: white;
+  font-size: 3rem;
+  background-color: #4b122c;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-.language .flages {
-  background-image: url("../img/Flag_of_Spain.png");
+.contact .adress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  text-align: center;
 }
 
-.language .flagpl {
-  background-image: url("../img/poland.png");
+.contact .adress .adresInfo {
+  margin-top: 1em;
+  padding: 2em;
+  border: 1px solid rgba(0, 0, 0, 0.178);
+  border-radius: 8px;
 }
 
-.language .flagen {
-  background-image: url("../img/United_Kingdom.png");
+.contact .adress .adresInfo h2 {
+  font-size: 3rem;
+  margin-bottom: 1em;
+}
+
+.contact .adress .adresInfo a {
+  font-size: 3rem;
+  text-decoration: none;
+  color: #4b122c;
+}
+
+.contact .adress .adresInfo p {
+  padding: 0.5em;
+  font-size: 1.4em;
+}
+
+.contact .adress .adressMap {
+  width: 100%;
+}
+
+.contact .adress .adressMap p {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1em;
+}
+
+.contact .adress .adressMap iframe {
+  width: 100%;
+  min-height: 400px;
 }
 
 @media (min-width: 768px) {
@@ -219,6 +353,18 @@ ul li a {
   }
   ul > li {
     font-size: 3.4rem;
+  }
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 /*# sourceMappingURL=style.css.map */
