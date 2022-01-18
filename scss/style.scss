@@ -10,12 +10,20 @@ html {
 
 body {
 	font-family: "Montserrat", sans-serif;
+	background-color: #ddd;
 }
 
 .wrapper {
 	margin: 0px auto;
 	width: 100%;
 	max-width: 1200px;
+}
+
+.section-header {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 3rem;
+	margin: 4rem auto;
 }
 
 // NAWIGACJA
@@ -259,6 +267,13 @@ header {
 }
 
 @media (min-width: 768px) {
+	.section-header {
+		
+		font-size: 5rem;
+		
+	}
+
+
 	// Nawigacja
 	.burgerMenu {
 		a {
@@ -300,5 +315,13 @@ header {
 		display: flex;
 		flex-direction: row;
 		align-items: flex-start;
+
+		.contactForm {
+			margin: 0;
+
+			form {
+				margin: 0;
+			}
+		}
 	}
 }
