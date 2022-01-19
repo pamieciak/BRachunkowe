@@ -15,7 +15,7 @@
 
 <body>
 
-    <nav>
+    <nav class="">
 
         <div class="wrapper">
             <div class="burgerMenu">
@@ -26,7 +26,7 @@
                 </button>
             </div>
             <ul class="menuList">
-                <li><a href="aboutme">O mnie</a></li>
+                <li><a href="#aboutus">O mnie</a></li>
                 <li><a href="services">Usługi</a></li>
                 <li><a href="prices">Cennik</a></li>
                 <li><a href="#contact">Kontakt</a></li>
@@ -51,17 +51,58 @@
     </header>
 
     <main>
-        <section id="contact">
+
+        <section id="aboutus" class="aboutus sections" >
+
+          
+                <h2 class="section-header">O mnie</h2>
+        
+
+
+            <div class="wrapper">
+                <div class="displayview">
+                    <div class="aboutcard">
+                        <div class="abouttext">
+                            <h3>Żaneta Ziółkowska</h3>
+                            <p>Krótka informacja o Pani i np Pani doświadczeniu </p>
+                               
+                        </div>
+                    </div>
+                    <div class="aboutdisplaytext">
+                        <h3>Żaneta Ziółkowska</h3>
+                        <p>Krótka informacja o Pani i np Pani doświadczeniu</p>
+                    </div>
+                </div>
+                <p class="officeInfo">Moje biuro specjalizuje się w obsłudze podmiotów gospodarczych w zakresie księgowości oraz kadr i płac na terenie całej Polski.
+
+                    Oferuję Państwu profesjonalną księgowość z wykorzystaniem najnowocześniejszych programów i sposobów komunikacji.
+                    
+                    Zapewniam wysoką jakość, bezpieczeństwo, poufność i terminowość świadczonych usług.
+                    
+                    Obsługa prowadzona w języku polskim, angielskim i hiszpańskim</p>
+            </div>
+
+
+        </section>
+
+
+
+
+        <section id="contact" class="sections">
 
             <h2 class="section-header">Kontakt</h2>
-            
+
             <div class="contact wrapper">
                 <div class="contactForm">
-                    <form action="mailto:r.pamieta@gmail.com" method="POST" enctype="multipart/form-data">
+
+    
+                    <form action="contact.php" method="POST">
                         <label for="username">Podaj imię i nazwisko:</label>
-                        <input type="text" id="username" placeholder="Podaj swoje dane">
-                        <label for="">Podaj adres e-mail:</label>
-                        <input type="email" placeholder="wpisz swój adres e-mail">
+                        <input type="text" id="username" name="name" placeholder="Podaj swoje dane">
+
+                        <label for="email">Podaj adres e-mail:</label>
+                        <input type="email" name="email" placeholder="wpisz swój adres e-mail">
+
                         <label for="case">W jakiej sprawie piszesz?</label>
                         <select name="" id="case">
                             <option value="choose" disabled selected>- wybierz sprawę -</option>
@@ -71,7 +112,7 @@
                             <option value="Kadry i Płace">Kadry i Płace</option>
                         </select>
                         <label for="textarea">Masz pytania? Napisz:</label>
-                        <textarea name="" id="textarea" rows="10" placeholder="napisz treść wiadomości"></textarea>
+                        <textarea name="message" id="textarea" rows="10" placeholder="napisz treść wiadomości"></textarea>
                         <button type="submit">Wyślij</button>
                     </form>
                 </div>

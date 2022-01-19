@@ -12,7 +12,6 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #ddd;
 }
 
 .wrapper {
@@ -25,13 +24,23 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 3rem;
-  margin: 4rem auto;
+  margin: 6rem auto;
+}
+
+.sections {
+  scroll-margin-top: 10rem;
 }
 
 nav {
   position: fixed;
   z-index: 3;
   width: 100%;
+  -webkit-transition: background-color .8s;
+  transition: background-color .8s;
+}
+
+.move {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .burgerMenu {
@@ -202,8 +211,63 @@ header {
   font-size: 1.8rem;
 }
 
+.aboutus {
+  position: relative;
+  scroll-margin-top: 100px;
+}
+
+.aboutcard {
+  position: relative;
+  margin: 2em 1em;
+  height: 400px;
+  background-image: url("../img/ruda1920.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 2px 5px red;
+          box-shadow: 0px 2px 5px red;
+  overflow: hidden;
+}
+
+.aboutcard .abouttext {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  top: 75%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+}
+
+.aboutcard .abouttext h3 {
+  font-size: 2rem;
+}
+
+.aboutcard .abouttext p {
+  padding: 0.2em 0.4em;
+  font-size: 1.3rem;
+}
+
+.officeInfo {
+  margin: 2em;
+  text-align: justify;
+  font-size: 1.4rem;
+}
+
+.aboutdisplaytext {
+  display: none;
+}
+
 .contact {
-  margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,7 +285,6 @@ header {
 
 .contact .contactForm {
   width: 100%;
-  margin: 2em;
 }
 
 .contact .contactForm form {
@@ -238,7 +301,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 2em auto;
+  margin: 0 auto;
 }
 
 .contact .contactForm form label {
@@ -356,6 +419,44 @@ header {
     width: 70px;
     height: 70px;
   }
+  .displayview {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 2em;
+  }
+  .displayview .aboutcard {
+    height: 600px;
+    width: 50%;
+  }
+  .displayview .abouttext {
+    display: none;
+  }
+  .aboutdisplaytext {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    width: 50%;
+    color: black;
+  }
+  .aboutdisplaytext h3 {
+    margin-bottom: 4rem;
+    font-size: 5rem;
+  }
+  .aboutdisplaytext p {
+    font-size: 2rem;
+  }
+  .officeInfo {
+    font-size: 2.2rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -376,12 +477,14 @@ header {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    margin-top: 3rem;
   }
   .contact .contactForm {
     margin: 0;
   }
   .contact .contactForm form {
     margin: 0;
+    bottom: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
