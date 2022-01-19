@@ -12,6 +12,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: rgba(206, 217, 219, 0.678);
 }
 
 .wrapper {
@@ -224,8 +225,8 @@ header {
   background-size: cover;
   background-position: center;
   border-radius: 12px;
-  -webkit-box-shadow: 0px 2px 5px red;
-          box-shadow: 0px 2px 5px red;
+  -webkit-box-shadow: 0px 0px 15px #4b122c;
+          box-shadow: 0px 0px 15px #4b122c;
   overflow: hidden;
 }
 
@@ -362,10 +363,11 @@ header {
 }
 
 .contact .adress .adresInfo {
-  margin-top: 1em;
+  margin-top: 2em;
   padding: 2em;
   border: 1px solid rgba(0, 0, 0, 0.178);
   border-radius: 8px;
+  background-color: white;
 }
 
 .contact .adress .adresInfo h2 {
