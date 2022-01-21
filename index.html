@@ -19,7 +19,7 @@
 
         <div class="wrapper">
             <div class="burgerMenu">
-                <a href="">Biuro rachunkowe Żaneta Ziółkowska</a>
+                <a href="index.html">Biuro rachunkowe Żaneta Ziółkowska</a>
                 <button class="menuBtn">
                     <i class="fas fa-bars"></i>
                     <i class="fas fa-times hide"></i>
@@ -52,11 +52,11 @@
 
     <main>
 
-        <section id="aboutus" class="aboutus sections" >
+        <section id="aboutus" class="aboutus sections">
 
-          
-                <h2 class="section-header">O mnie</h2>
-        
+
+            <h2 class="section-header">O mnie</h2>
+
 
 
             <div class="wrapper">
@@ -65,7 +65,7 @@
                         <div class="abouttext">
                             <h3>Żaneta Ziółkowska</h3>
                             <p>Krótka informacja o Pani i np Pani doświadczeniu </p>
-                               
+
                         </div>
                     </div>
                     <div class="aboutdisplaytext">
@@ -73,15 +73,61 @@
                         <p>Krótka informacja o Pani i np Pani doświadczeniu</p>
                     </div>
                 </div>
-                <p class="officeInfo">Moje biuro specjalizuje się w obsłudze podmiotów gospodarczych w zakresie księgowości oraz kadr i płac na terenie całej Polski.
+                <p class="officeInfo">Moje biuro specjalizuje się w obsłudze podmiotów gospodarczych w zakresie
+                    księgowości oraz kadr i płac na terenie całej Polski.
 
-                    Oferuję Państwu profesjonalną księgowość z wykorzystaniem najnowocześniejszych programów i sposobów komunikacji.
-                    
+                    Oferuję Państwu profesjonalną księgowość z wykorzystaniem najnowocześniejszych programów i
+                    sposobów komunikacji.
+
                     Zapewniam wysoką jakość, bezpieczeństwo, poufność i terminowość świadczonych usług.
-                    
+
                     Obsługa prowadzona w języku polskim, angielskim i hiszpańskim</p>
             </div>
 
+
+        </section>
+
+        <section id="services" class="sections">
+
+            <h2 class="section-header">Usługi</h2>
+
+            <div class="wrapper">
+
+                <div class="accordeon">
+                    <div class="accinfo">
+                        <div class="produkt">Księgi rachunkowe</div>
+                        <div class="produktInfo">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur porro hic vel
+                                necessitatibus optio, minus dicta velit obcaecati exercitationem facere cupiditate modi
+                                veritatis blanditiis! Alias totam magni ut veritatis unde?</p>
+                        </div>
+                    </div>
+                    <div class="accinfo">
+                        <div class="produkt">Książka Przychodów i Rozchodów</div>
+                        <div class="produktInfo">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur porro hic vel
+                                necessitatibus optio, minus dicta velit obcaecati exercitationem facere cupiditate modi
+                                veritatis blanditiis! Alias totam magni ut veritatis unde?</p>
+                        </div>
+                    </div>
+                    <div class="accinfo">
+                        <div class="produkt">Ryczałt</div>
+                        <div class="produktInfo">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur porro hic vel
+                                necessitatibus optio, minus dicta velit obcaecati exercitationem facere cupiditate modi
+                                veritatis blanditiis! Alias totam magni ut veritatis unde?</p>
+                        </div>
+                    </div>
+                    <div class="accinfo">
+                        <div class="produkt">Kadry i płace</div>
+                        <div class="produktInfo">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur porro hic vel
+                                necessitatibus optio, minus dicta velit obcaecati exercitationem facere cupiditate modi
+                                veritatis blanditiis! Alias totam magni ut veritatis unde?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </section>
 
@@ -92,36 +138,39 @@
 
             <h2 class="section-header">Kontakt</h2>
 
-            <div class="contact wrapper">
-                <div class="contactForm">
+            <div class="wrapper">
+                <div class="contact">
+                    <div class="contactForm">
+                        <form action="https://formspree.io/f/xoqrjnwv" method="POST">
+                            <label for="username">Podaj imię i nazwisko:</label>
+                            <input type="text" id="username" name="name" placeholder="Podaj swoje dane">
 
-    
-                    <form action="https://formspree.io/f/xoqrjnwv" method="POST">
-                        <label for="username">Podaj imię i nazwisko:</label>
-                        <input type="text" id="username" name="name" placeholder="Podaj swoje dane">
+                            <label for="email">Podaj adres e-mail:</label>
+                            <input type="email" name="email" placeholder="wpisz swój adres e-mail">
 
-                        <label for="email">Podaj adres e-mail:</label>
-                        <input type="email" name="email" placeholder="wpisz swój adres e-mail">
-
-                        <label for="case">W jakiej sprawie piszesz?</label>
-                        <select name="" id="case">
-                            <option value="choose" disabled selected>- wybierz sprawę -</option>
-                            <option value="Księgi Rachunkowe">Księgi Rachunkowe</option>
-                            <option value="Książka przychodów i pozchodów">Książka przychodów i Rozchodów</option>
-                            <option value="Ryczałt">Ryczałt</option>
-                            <option value="Kadry i Płace">Kadry i Płace</option>
-                        </select>
-                        <label for="textarea">Masz pytania? Napisz:</label>
-                        <textarea name="message" id="textarea" rows="10" placeholder="napisz treść wiadomości"></textarea>
-                        <button type="submit">Wyślij</button>
-                    </form>
-                </div>
-                <div class="adress">
-                    <div class="adresInfo">
-                        <a href="tel:+48504304414">tel: 504 304 414</a>
-                        <p>Adres:</p>
-                        <p>ul. Zmyślona 6</p>
-                        <p>00-000 Gdańsk</p>
+                            <label for="case">W jakiej sprawie piszesz?</label>
+                            <select name="case" id="case">
+                                <option value="choose" disabled selected>- wybierz sprawę -</option>
+                                <option value="Księgi Rachunkowe">Księgi Rachunkowe</option>
+                                <option value="Książka przychodów i pozchodów">Książka przychodów i Rozchodów</option>
+                                <option value="Ryczałt">Ryczałt</option>
+                                <option value="Kadry i Płace">Kadry i Płace</option>
+                            </select>
+                            <label for="textarea">Masz pytania? Napisz:</label>
+                            <textarea name="message" id="textarea" rows="10"
+                                placeholder="napisz treść wiadomości"></textarea>
+                            <button type="submit">Wyślij</button>
+                            <input type="hidden" name="_next" value="https://www.google.pl/" />
+                        </form>
+                        <div class="adress">
+                            <div class="adresInfo">
+                                <p>Telefon</p>
+                                <a href="tel:+48504304414">504 304 414</a>
+                                <p>Adres:</p>
+                                <p>ul. Zmyślona 6</p>
+                                <p>00-000 Gdańsk</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="adressMap">
                         <p>Mapa dojazdu</p>

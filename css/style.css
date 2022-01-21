@@ -36,8 +36,8 @@ nav {
   position: fixed;
   z-index: 3;
   width: 100%;
-  -webkit-transition: background-color .8s;
-  transition: background-color .8s;
+  -webkit-transition: background-color 0.8s;
+  transition: background-color 0.8s;
 }
 
 .move {
@@ -268,6 +268,98 @@ header {
   display: none;
 }
 
+.accordeon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.accordeon .accinfo {
+  width: 80%;
+}
+
+.accordeon .accinfo .produkt {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: .5em 0;
+  height: 60px;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #4b122c;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.accordeon .accinfo .produkt::before {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 2.5rem;
+}
+
+.accordeon .accinfo .produkt.active::before {
+  content: '-';
+  font-size: 2.8rem;
+}
+
+.accordeon .accinfo .produkt.active + .produktInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 150px;
+  text-align: center;
+  -webkit-transition: height .4s;
+  transition: height .4s;
+}
+
+.accordeon .accinfo .produktInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 0;
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-transition: height .4s;
+  transition: height .4s;
+}
+
 .contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -314,11 +406,22 @@ header {
 .contact .contactForm form select,
 .contact .contactForm form textarea {
   width: 80%;
-  height: 60px;
+  height: 40px;
   padding: 0.6em;
-  font-size: 18px;
+  font-size: 14px;
   border: 1px solid rgba(0, 0, 0, 0.178);
   border-radius: 8px;
+}
+
+.contact .contactForm form input:hover,
+.contact .contactForm form select:hover,
+.contact .contactForm form textarea:hover {
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+  -webkit-box-shadow: 0px 0px 7px #4b122c;
+          box-shadow: 0px 0px 7px #4b122c;
 }
 
 .contact .contactForm form select {
@@ -386,17 +489,29 @@ header {
   font-size: 1.4em;
 }
 
-.contact .adress .adressMap {
-  width: 100%;
+.contact .adressMap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2em;
+  padding-top: 3.5rem;
+  width: 90%;
 }
 
-.contact .adress .adressMap p {
+.contact .adressMap p {
   text-align: center;
-  font-size: 2rem;
-  margin: 1em;
+  font-size: 2.2rem;
 }
 
-.contact .adress .adressMap iframe {
+.contact .adressMap iframe {
+  margin: 0 auto;
   width: 100%;
   min-height: 400px;
 }
@@ -425,11 +540,14 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 0 2em;
   }
   .displayview .aboutcard {
-    height: 600px;
-    width: 50%;
+    height: 400px;
+    width: 30%;
   }
   .displayview .abouttext {
     display: none;
@@ -472,19 +590,47 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 3rem;
   }
+  .contact .adress {
+    width: 30%;
+  }
+  .contact .adress .adresInfo {
+    height: 60%;
+    margin-top: 2em;
+    padding: 2em;
+    border: 1px solid rgba(0, 0, 0, 0.178);
+    border-radius: 8px;
+    background-color: white;
+  }
+  .contact .adress .adresInfo a {
+    font-size: 3rem;
+    text-decoration: none;
+    color: #4b122c;
+  }
+  .contact .adress .adresInfo p {
+    padding: 0.5em;
+    font-size: 1.4em;
+  }
   .contact .contactForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
     margin: 0;
   }
   .contact .contactForm form {
+    width: 60%;
     margin: 0;
     bottom: 0;
   }
