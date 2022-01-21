@@ -299,9 +299,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: .5em 0;
+  margin: 0.5em 0;
   height: 60px;
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: #fff;
   background-color: #4b122c;
   border-radius: 8px;
@@ -309,7 +309,7 @@ header {
 }
 
 .accordeon .accinfo .produkt::before {
-  content: '+';
+  content: "+";
   position: absolute;
   top: 50%;
   right: 5%;
@@ -319,7 +319,7 @@ header {
 }
 
 .accordeon .accinfo .produkt.active::before {
-  content: '-';
+  content: "-";
   font-size: 2.8rem;
 }
 
@@ -335,11 +335,12 @@ header {
           align-items: center;
   height: 150px;
   text-align: center;
-  -webkit-transition: height .4s;
-  transition: height .4s;
+  -webkit-transition: height 0.4s;
+  transition: height 0.4s;
 }
 
 .accordeon .accinfo .produktInfo {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -352,12 +353,12 @@ header {
   width: 100%;
   height: 0;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
-  -webkit-transition: height .4s;
-  transition: height .4s;
+  -webkit-transition: height 0.4s;
+  transition: height 0.4s;
 }
 
 .contact {
@@ -576,6 +577,17 @@ header {
   }
   .officeInfo {
     font-size: 2.2rem;
+  }
+  .accordeon .accinfo .produkt {
+    font-size: 2rem;
+  }
+  .accordeon .accinfo .produkt::before {
+    content: "+";
+    font-size: 2.5rem;
+  }
+  .accordeon .accinfo .produkt.active::before {
+    content: "-";
+    font-size: 2.8rem;
   }
 }
 

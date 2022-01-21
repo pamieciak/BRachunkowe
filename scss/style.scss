@@ -234,70 +234,58 @@ header {
 	align-items: center;
 
 	.accinfo {
-	
 		width: 80%;
-		
 
 		.produkt {
 			position: relative;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin: .5em 0;
+			margin: 0.5em 0;
 			height: 60px;
-			font-size: 2rem;
+			font-size: 1.3rem;
 			color: #fff;
 			background-color: rgb(75, 18, 44);
 			border-radius: 8px;
 			cursor: pointer;
-		
-
-			
 		}
-		.produkt::before{
-			content: '+';
+		.produkt::before {
+			content: "+";
 			position: absolute;
 			top: 50%;
 			right: 5%;
 			transform: translateY(-50%);
 			font-size: 2.5rem;
-			
 		}
 
-		.produkt.active::before{
-			content: '-';
+		.produkt.active::before {
+			content: "-";
 			font-size: 2.8rem;
-			
-
 		}
 
-		.produkt.active + .produktInfo{
-			
+		.produkt.active + .produktInfo {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			height: 150px;
 			text-align: center;
-			transition: height .4s;
+			transition: height 0.4s;
 		}
 
-		.produktInfo{
+		.produktInfo {
+			position: relative;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			width: 100%;
-			height: 0;		
+			height: 0;
 			text-align: center;
-			font-size: 1.8rem;
+			font-size: 1.4rem;
 			background-color: #fff;
 			border-radius: 8px;
 			overflow: hidden;
-			transition: height .4s;
-		
-
+			transition: height 0.4s;
 		}
-
-		
 	}
 }
 
@@ -476,6 +464,24 @@ header {
 	}
 	.officeInfo {
 		font-size: 2.2rem;
+	}
+
+	// Services!
+	.accordeon {
+		.accinfo {
+			.produkt {
+				font-size: 2rem;
+			}
+			.produkt::before {
+				content: "+";
+				font-size: 2.5rem;
+			}
+
+			.produkt.active::before {
+				content: "-";
+				font-size: 2.8rem;
+			}
+		}
 	}
 }
 
