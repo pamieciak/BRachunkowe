@@ -20,6 +20,7 @@ body {
 }
 
 .section-header {
+	padding: 1.5em 0em;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 3rem;
@@ -27,7 +28,7 @@ body {
 }
 
 .sections {
-	scroll-margin-top: 10rem;
+	scroll-margin-top: 5rem;
 }
 
 // NAWIGACJA
@@ -187,7 +188,6 @@ header {
 
 .aboutus {
 	position: relative;
-	scroll-margin-top: 70px;
 	background-color: rgb(243, 244, 245);
 }
 
@@ -225,7 +225,7 @@ header {
 }
 
 .officeInfo {
-	margin-top: 2em;
+	margin: 2em 2em 0em 2em;
 	text-align: justify;
 	font-size: 1.4rem;
 }
@@ -238,7 +238,7 @@ header {
 
 .services {
 	position: relative;
-	scroll-margin-top: -30px;
+	
 	
 }
 
@@ -441,7 +441,7 @@ header {
 @media (min-width: 768px) {
 	.section-header {
 		font-size: 5rem;
-		padding: 1.5em 0em;
+		
 	}
 
 	// Nawigacja

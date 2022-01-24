@@ -22,13 +22,14 @@ body {
 }
 
 .section-header {
+  padding: 1.5em 0em;
   text-align: center;
   text-transform: uppercase;
   font-size: 3rem;
 }
 
 .sections {
-  scroll-margin-top: 10rem;
+  scroll-margin-top: 5rem;
 }
 
 nav {
@@ -219,7 +220,6 @@ header {
 
 .aboutus {
   position: relative;
-  scroll-margin-top: 70px;
   background-color: #f3f4f5;
 }
 
@@ -265,7 +265,7 @@ header {
 }
 
 .officeInfo {
-  margin-top: 2em;
+  margin: 2em 2em 0em 2em;
   text-align: justify;
   font-size: 1.4rem;
 }
@@ -276,7 +276,6 @@ header {
 
 .services {
   position: relative;
-  scroll-margin-top: -30px;
 }
 
 .accordeon {
@@ -499,7 +498,6 @@ header {
 @media (min-width: 768px) {
   .section-header {
     font-size: 5rem;
-    padding: 1.5em 0em;
   }
   .burgerMenu a {
     font-size: 2.2rem;
