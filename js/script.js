@@ -4,20 +4,36 @@ const xBtn = document.querySelector(".fa-times");
 const menuList = document.querySelector(".menuList");
 const menuItems = document.querySelectorAll("li a");
 const nav = document.querySelector("nav");
-const accordeon = document.querySelectorAll(".produkt");
+const accordeon = document.querySelector(".accordeon");
+const accBtn = document.querySelectorAll(".accordeon-btn");
 
-const showServ = () => {
-	accordeon.forEach(acc => {
-		acc.addEventListener("click", () => {
 
-			acc.classList.toggle("active");
+function openAccordeonItems() {
+	if (this.nextElementSibling.classList.contains("active")) {
+		this.nextElementSibling.classList.remove("active");
+	} else {
+		closeAccordeon();
+		this.nextElementSibling.classList.toggle("active");
+	}
+}
 
-		
-		});
-	});
+const closeAccordeon = () => {
+	const allActiveItems = document.querySelectorAll(".accordeon-info");
+
+	allActiveItems.forEach(item => item.classList.remove("active"));
 };
 
-showServ();
+const clickOutside = e => {
+	if (
+		e.target.classList.contains("accordeon-btn") ||
+		e.target.classList.contains("accordeon-info") ||
+		e.target.classList.contains("accordeon-info-text")
+	) {
+		return;
+	}
+
+	closeAccordeon();
+};
 
 const handleNav = () => {
 	nav.classList.toggle("move", window.scrollY > 0);
@@ -33,5 +49,7 @@ const showMenu = () => {
 	});
 };
 
+accBtn.forEach(btn => btn.addEventListener("click", openAccordeonItems));
+window.addEventListener("click", clickOutside);
 window.addEventListener("scroll", handleNav);
 menuBtn.addEventListener("click", showMenu);

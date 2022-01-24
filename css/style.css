@@ -68,11 +68,17 @@ nav {
 }
 
 .burgerMenu a {
+  text-align: center;
   font-size: 1.5rem;
   padding: 0rem 1rem;
   text-decoration: none;
-  text-transform: uppercase;
+  font-weight: 300;
   color: white;
+}
+
+.burgerMenu a span {
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .hide {
@@ -203,13 +209,13 @@ header {
 }
 
 .heroText h1 {
-  margin-bottom: 1em;
-  font-size: 2.5rem;
+  font-size: 4rem;
   text-transform: uppercase;
 }
 
 .heroText p {
-  font-size: 1.8rem;
+  margin: 1em;
+  font-size: 1.5rem;
 }
 
 .aboutus {
@@ -279,86 +285,59 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.accordeon .accinfo {
-  width: 80%;
-}
-
-.accordeon .accinfo .produkt {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0.5em 0;
-  height: 60px;
-  font-size: 1.3rem;
-  color: #fff;
-  background-color: #4b122c;
+  background-color: #dde5e6;
   border-radius: 8px;
+}
+
+.accordeon-box {
+  margin: 20px;
+}
+
+.accordeon-btn {
+  position: relative;
+  padding: 1em;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  background-color: white;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
   cursor: pointer;
 }
 
-.accordeon .accinfo .produkt::before {
-  content: "+";
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-size: 2.5rem;
+.accordeon-btn:hover,
+.accordeon-btn:focus {
+  background-color: #4b122c;
+  color: white;
+  outline: none;
 }
 
-.accordeon .accinfo .produkt.active::before {
-  content: "-";
-  font-size: 2.8rem;
-}
-
-.accordeon .accinfo .produkt.active + .produktInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 150px;
-  text-align: center;
-  -webkit-transition: height 0.4s;
-  transition: height 0.4s;
-}
-
-.accordeon .accinfo .produktInfo {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 0;
-  text-align: center;
-  font-size: 1.4rem;
-  background-color: #fff;
-  border-radius: 8px;
+.accordeon-info {
+  max-height: 0;
   overflow: hidden;
-  -webkit-transition: height 0.4s;
-  transition: height 0.4s;
+  border-radius: 6px;
+  -webkit-transition: max-height 1s;
+  transition: max-height 1s;
+}
+
+.accordeon-info .accordeon-info-text {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1em 2em;
+  background-color: white;
+  color: black;
+}
+
+.active {
+  max-height: 700px;
+  -webkit-transition: max-height 1s;
+  transition: max-height 1s;
 }
 
 .contact {
@@ -490,33 +469,6 @@ header {
   font-size: 1.4em;
 }
 
-.contact .adressMap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 2em;
-  padding-top: 3.5rem;
-  width: 90%;
-}
-
-.contact .adressMap p {
-  text-align: center;
-  font-size: 2.2rem;
-}
-
-.contact .adressMap iframe {
-  margin: 0 auto;
-  width: 100%;
-  min-height: 400px;
-}
-
 @media (min-width: 768px) {
   .section-header {
     font-size: 5rem;
@@ -578,16 +530,11 @@ header {
   .officeInfo {
     font-size: 2.2rem;
   }
-  .accordeon .accinfo .produkt {
+  .accordeon-btn {
+    font-size: 3rem;
+  }
+  .accordeon-info .accordeon-info-text {
     font-size: 2rem;
-  }
-  .accordeon .accinfo .produkt::before {
-    content: "+";
-    font-size: 2.5rem;
-  }
-  .accordeon .accinfo .produkt.active::before {
-    content: "-";
-    font-size: 2.8rem;
   }
 }
 
