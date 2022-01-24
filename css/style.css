@@ -25,7 +25,6 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 3rem;
-  margin: 6rem auto;
 }
 
 .sections {
@@ -185,10 +184,10 @@ header {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
+  z-index: -2;
 }
 
 .heroText {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,13 +213,14 @@ header {
 }
 
 .heroText p {
-  margin: 1em;
+  margin: 0.5em;
   font-size: 1.5rem;
 }
 
 .aboutus {
   position: relative;
-  scroll-margin-top: 100px;
+  scroll-margin-top: 70px;
+  background-color: #f3f4f5;
 }
 
 .aboutcard {
@@ -265,13 +265,18 @@ header {
 }
 
 .officeInfo {
-  margin: 2em;
+  margin-top: 2em;
   text-align: justify;
   font-size: 1.4rem;
 }
 
 .aboutdisplaytext {
   display: none;
+}
+
+.services {
+  position: relative;
+  scroll-margin-top: -30px;
 }
 
 .accordeon {
@@ -294,7 +299,16 @@ header {
 }
 
 .accordeon-box {
-  margin: 20px;
+  margin: 1rem;
+  -webkit-box-shadow: 0px 0px 5px #4b122c;
+          box-shadow: 0px 0px 5px #4b122c;
+  border-radius: 8px;
+}
+
+.accordeon-box span {
+  padding: 1em;
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 .accordeon-btn {
@@ -308,6 +322,7 @@ header {
   background-color: white;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
+  color: black;
   cursor: pointer;
 }
 
@@ -338,6 +353,10 @@ header {
   max-height: 700px;
   -webkit-transition: max-height 1s;
   transition: max-height 1s;
+}
+
+#contact {
+  background-color: #f3f4f5;
 }
 
 .contact {
@@ -418,9 +437,9 @@ header {
 .contact .contactForm form button {
   margin-top: 1em;
   width: 200px;
-  padding: 0.5em 1em;
+  padding: 0.75em 1em;
   color: white;
-  font-size: 3rem;
+  font-size: 1.5rem;
   background-color: #4b122c;
   border: none;
   border-radius: 8px;
@@ -453,25 +472,34 @@ header {
   background-color: white;
 }
 
-.contact .adress .adresInfo h2 {
-  font-size: 3rem;
-  margin-bottom: 1em;
-}
-
 .contact .adress .adresInfo a {
-  font-size: 3rem;
+  font-size: 2rem;
   text-decoration: none;
   color: #4b122c;
 }
 
-.contact .adress .adresInfo p {
+.contact .adress .adresInfo .mainp {
   padding: 0.5em;
   font-size: 1.4em;
+  font-weight: bold;
+}
+
+.contact .adress .adresInfo p {
+  font-size: 1.4em;
+}
+
+.contact .adress .adresInfo .pinfo {
+  margin-top: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  text-decoration: underline;
 }
 
 @media (min-width: 768px) {
   .section-header {
     font-size: 5rem;
+    padding: 1.5em 0em;
   }
   .burgerMenu a {
     font-size: 2.2rem;
@@ -480,10 +508,10 @@ header {
     font-size: 3rem;
   }
   .heroText h1 {
-    font-size: 4rem;
+    font-size: 6rem;
   }
   .heroText p {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   .circle {
     width: 70px;
@@ -562,21 +590,36 @@ header {
     width: 30%;
   }
   .contact .adress .adresInfo {
-    height: 60%;
-    margin-top: 2em;
-    padding: 2em;
-    border: 1px solid rgba(0, 0, 0, 0.178);
-    border-radius: 8px;
-    background-color: white;
+    height: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .contact .adress .adresInfo a {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-decoration: none;
     color: #4b122c;
   }
-  .contact .adress .adresInfo p {
+  .contact .adress .adresInfo .mainp {
     padding: 0.5em;
-    font-size: 1.4em;
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+  .contact .adress .adresInfo p {
+    font-size: 1.6em;
+  }
+  .contact .adress .adresInfo .pinfo {
+    margin-top: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    text-decoration: underline;
   }
   .contact .contactForm {
     display: -webkit-box;
