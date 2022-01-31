@@ -26,6 +26,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 3rem;
+  color: white;
 }
 
 .sections {
@@ -131,7 +132,7 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #4b122c;
+  background-color: #00838F;
   height: 100vh;
   width: 100vw;
   z-index: 1;
@@ -170,7 +171,7 @@ header {
   display: flex;
   bottom: 0;
   right: 0;
-  z-index: 5;
+  z-index: 2;
 }
 
 .language .circle {
@@ -242,7 +243,8 @@ header {
 
 .aboutus {
   position: relative;
-  background-color: #f3f4f5;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, black), to(#412715));
+  background-image: linear-gradient(black 10%, #412715);
 }
 
 .aboutcard {
@@ -288,8 +290,12 @@ header {
 
 .officeInfo {
   margin: 2em 2em 0em 2em;
+  padding: 3rem;
   text-align: justify;
   font-size: 1.4rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.03);
+  color: white;
 }
 
 .aboutdisplaytext {
@@ -298,6 +304,11 @@ header {
 
 .services {
   position: relative;
+  background: #412715;
+}
+
+.services h2 {
+  background: #412715;
 }
 
 .accordeon {
@@ -315,7 +326,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #dde5e6;
+  background-color: #412715;
   border-radius: 8px;
 }
 
@@ -340,7 +351,7 @@ header {
   text-align: center;
   border: none;
   border-radius: 6px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
   color: black;
@@ -349,7 +360,7 @@ header {
 
 .accordeon-btn:hover,
 .accordeon-btn:focus {
-  background-color: #4b122c;
+  background-color: #00838F;
   color: white;
   outline: none;
 }
@@ -377,7 +388,8 @@ header {
 }
 
 #contact {
-  background-color: #f3f4f5;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #412715), to(black));
+  background-image: linear-gradient(#412715 30%, black);
 }
 
 .contact {
@@ -420,6 +432,7 @@ header {
 .contact .contactForm form label {
   font-size: 2rem;
   margin: 0.5em 1em;
+  color: white;
 }
 
 .contact .contactForm form input,
@@ -461,7 +474,7 @@ header {
   padding: 0.75em 1em;
   color: white;
   font-size: 1.5rem;
-  background-color: #4b122c;
+  background-color: #00838F;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -515,6 +528,30 @@ header {
   text-transform: uppercase;
   font-size: 1.8rem;
   text-decoration: underline;
+}
+
+footer {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 8vh;
+}
+
+.footer {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
 }
 
 @media (min-width: 768px) {
