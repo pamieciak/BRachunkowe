@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: rgba(206, 217, 219, 0.678);
+  background-color: #030001;
 }
 
 .wrapper {
@@ -40,8 +40,61 @@ nav {
   transition: background-color 0.8s;
 }
 
+.logo {
+  visibility: hidden;
+}
+
 .move {
+  visibility: visible;
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.logo.move {
+  -webkit-animation: opac 0.8s;
+          animation: opac 0.8s;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@-webkit-keyframes opac {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opac {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .burgerMenu {
@@ -129,6 +182,11 @@ ul li a {
           transform: translateX(-100%);
 }
 
+header {
+  position: relative;
+  overflow: hidden;
+}
+
 .language {
   position: absolute;
   display: -webkit-box;
@@ -136,6 +194,7 @@ ul li a {
   display: flex;
   bottom: 0;
   right: 0;
+  z-index: 5;
 }
 
 .language .circle {
@@ -144,7 +203,6 @@ ul li a {
   border-radius: 40%;
   background-color: yellow;
   margin: 1em 1em;
-  z-index: 2;
   background-size: cover;
   background-position: center;
   -webkit-box-shadow: 2px 2px 5px black;
@@ -164,24 +222,21 @@ ul li a {
   background-image: url("../img/United_Kingdom.png");
 }
 
-header {
-  overflow: hidden;
-}
-
 .heroImg {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background-image: url("../img/hero1920.jpg");
-  background-size: cover;
-  background-position: center;
-  z-index: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-clip-path: polygon(0px 7vh, 100% 0px, 100% 85%, 0px 100%);
+          clip-path: polygon(0px 7vh, 100% 0px, 100% 85%, 0px 100%);
+  z-index: -20;
 }
 
 .heroBg {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
@@ -189,23 +244,16 @@ header {
 }
 
 .heroText {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   text-align: center;
   width: 100vw;
   height: 100vh;
   color: white;
+  z-index: 2;
 }
 
 .heroText h1 {

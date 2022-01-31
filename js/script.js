@@ -6,6 +6,7 @@ const menuItems = document.querySelectorAll("li a");
 const nav = document.querySelector("nav");
 const accordeon = document.querySelector(".accordeon");
 const accBtn = document.querySelectorAll(".accordeon-btn");
+const logo = document.querySelector('.logo');
 
 
 function openAccordeonItems() {
@@ -37,6 +38,7 @@ const clickOutside = e => {
 
 const handleNav = () => {
 	nav.classList.toggle("move", window.scrollY > 0);
+	logo.classList.toggle("move", window.scrollY > 0);
 };
 
 const showMenu = () => {
