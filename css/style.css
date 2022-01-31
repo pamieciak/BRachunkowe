@@ -50,26 +50,14 @@ nav {
 }
 
 .logo.move {
-  -webkit-animation: opac 0.8s;
-          animation: opac 0.8s;
+  -webkit-animation: opac 1s;
+          animation: opac 1s;
   background-color: rgba(0, 0, 0, 0);
 }
 
 @-webkit-keyframes opac {
   0% {
     opacity: 0;
-  }
-  20% {
-    opacity: 0.2;
-  }
-  40% {
-    opacity: 0.4;
-  }
-  60% {
-    opacity: 0.6;
-  }
-  80% {
-    opacity: 0.8;
   }
   100% {
     opacity: 1;
@@ -79,18 +67,6 @@ nav {
 @keyframes opac {
   0% {
     opacity: 0;
-  }
-  20% {
-    opacity: 0.2;
-  }
-  40% {
-    opacity: 0.4;
-  }
-  60% {
-    opacity: 0.6;
-  }
-  80% {
-    opacity: 0.8;
   }
   100% {
     opacity: 1;
@@ -228,8 +204,6 @@ header {
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-clip-path: polygon(0px 7vh, 100% 0px, 100% 85%, 0px 100%);
-          clip-path: polygon(0px 7vh, 100% 0px, 100% 85%, 0px 100%);
   z-index: -20;
 }
 
