@@ -1,4 +1,5 @@
-const menuBtn = document.querySelector(".menuBtn");
+const menuBtn = document.querySelector(".burger-menu__menuBtn");
+const logo = document.querySelector('.burger-menu__logo');
 const barsBtn = document.querySelector(".fa-bars");
 const xBtn = document.querySelector(".fa-times");
 const menuList = document.querySelector(".menuList");
@@ -6,7 +7,6 @@ const menuItems = document.querySelectorAll("li a");
 const nav = document.querySelector("nav");
 const accordeon = document.querySelector(".accordeon");
 const accBtn = document.querySelectorAll(".accordeon-btn");
-const logo = document.querySelector('.logo');
 
 
 function openAccordeonItems() {

@@ -26,14 +26,32 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 3rem;
-  color: white;
+  color: #fff;
 }
 
 .sections {
   scroll-margin-top: 5rem;
 }
 
-nav {
+@-webkit-keyframes showLogo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showLogo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav {
   position: fixed;
   z-index: 3;
   width: 100%;
@@ -41,40 +59,11 @@ nav {
   transition: background-color 0.8s;
 }
 
-.logo {
-  visibility: hidden;
-}
-
 .move {
-  visibility: visible;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(3, 0, 1, 0.8);
 }
 
-.logo.move {
-  -webkit-animation: opac 1s;
-          animation: opac 1s;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-@-webkit-keyframes opac {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes opac {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.burgerMenu {
+.burger-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,36 +75,43 @@ nav {
           align-items: center;
 }
 
-.burgerMenu button,
-.burgerMenu i {
+.burger-menu__menuBtn, .burger-menu .fas {
   font-size: 2em;
   padding: 0.75rem 1.2rem;
   border: none;
   background: transparent;
-  color: white;
+  color: #fff;
   z-index: 2;
   cursor: pointer;
 }
 
-.burgerMenu a {
+.burger-menu__logo {
   text-align: center;
   font-size: 1.5rem;
   padding: 0rem 1rem;
   text-decoration: none;
   font-weight: 300;
-  color: white;
+  color: #fff;
+  visibility: hidden;
 }
 
-.burgerMenu a span {
+.burger-menu__logo span {
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.burger-menu__logo.move {
+  visibility: visible;
+  -webkit-animation: showLogo 1s;
+          animation: showLogo 1s;
+  background-color: rgba(3, 0, 1, 0);
 }
 
 .hide {
   display: none;
 }
 
-ul {
+.menuList {
   position: absolute;
   top: 0;
   left: 100%;
@@ -142,16 +138,16 @@ ul {
   transition: transform 0.8s cubic-bezier(0.01, 0.65, 0.38, 0.9), -webkit-transform 0.8s cubic-bezier(0.01, 0.65, 0.38, 0.9);
 }
 
-ul li {
+.menuList__item {
   margin: 1.5em;
   list-style: none;
   font-size: 2.4rem;
   text-transform: uppercase;
 }
 
-ul li a {
+.menuList__item-link {
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 
 .showOptions {
@@ -178,7 +174,6 @@ header {
   width: 40px;
   height: 40px;
   border-radius: 40%;
-  background-color: yellow;
   margin: 1em 1em;
   background-size: cover;
   background-position: center;
