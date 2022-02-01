@@ -253,10 +253,10 @@ header {
 .officeInfo {
 	margin: 2em 2em 0em 2em;
 	padding: .75rem;
-	text-align: center;
+	text-align: justify;
 	font-size: 1.4rem;
 	border-radius: 8px;
-	background-color: rgba($color: #fff, $alpha: .03);
+	// background-color: rgba($color: #fff, $alpha: .03);
 	color: white
 }
 
@@ -278,7 +278,8 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	width: 100%;
+	margin: 0 auto;
+	width: 80%;
 	align-items: center;
 	background-color: #412715;;
 	border-radius: 8px;
@@ -486,6 +487,7 @@ footer{
 	font-size: 2rem;
 	color:white;
 }
+
 
 @media (min-width: 768px) {
 	.section-header {
