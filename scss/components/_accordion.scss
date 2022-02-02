@@ -40,6 +40,8 @@
 			align-items: center;
 			max-height: 0;
 			overflow: hidden;
+            // border-top-left-radius: 15px;
+            // border-top-right-radius: 15px;
 			background-color: $color-white;
 			transition: max-height 1s;
 
@@ -54,6 +56,7 @@
 					padding: 1em;
 					font-size: 1.3em;
 					font-weight: bold;
+                    color: $color-bg;
 				}
 			}
 			.info-prices{
@@ -67,6 +70,7 @@
 					padding: 1em;
 					font-size: 1.3em;
 					font-weight: bold;
+                    color: $color-bg;
 				}
 
 				li{
@@ -90,19 +94,19 @@
 		color: $color-white;
 		cursor: pointer;
 
-		&:hover,
-		&:focus {
-			background-color: #00838f;
-			color: white;
-			outline: none;
-		}
+		// &:hover,
+        // &:focus{
+		// 	background-color: #00838f;
+		// 	color: white;
+		// 	outline: none;
+		// }
+
 	}
 }
 
 
 
 .active {
-	// background-color: $color-white;
 	max-height: 1000px;
 	transition: max-height 1s;
 }

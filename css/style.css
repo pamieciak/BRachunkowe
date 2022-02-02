@@ -410,6 +410,7 @@ body {
   padding: 1em;
   font-size: 1.3em;
   font-weight: bold;
+  color: #030001;
 }
 
 .accordeon__box-info .info-prices {
@@ -424,6 +425,7 @@ body {
   padding: 1em;
   font-size: 1.3em;
   font-weight: bold;
+  color: #030001;
 }
 
 .accordeon__box-info .info-prices li {
@@ -444,12 +446,6 @@ body {
   transition: background-color 0.3s;
   color: #fff;
   cursor: pointer;
-}
-
-.accordeon__btn:hover, .accordeon__btn:focus {
-  background-color: #00838f;
-  color: white;
-  outline: none;
 }
 
 .active {

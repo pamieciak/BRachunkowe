@@ -16,6 +16,8 @@ function openAccordeonItems() {
 		closeAccordeon();
 		this.nextElementSibling.classList.toggle("active");
 	}
+
+	
 }
 
 const closeAccordeon = () => {
@@ -53,7 +55,7 @@ const showMenu = () => {
 
 
 
-accBtn.forEach(btn => btn.addEventListener("click", openAccordeonItems));
+accBtn.forEach(btn => btn.addEventListener("click",  openAccordeonItems, btn.classList.toggle('clicked')));
 window.addEventListener("click", clickOutside);
 window.addEventListener("scroll", handleNav);
 menuBtn.addEventListener("click", showMenu);
