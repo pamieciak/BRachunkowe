@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ec1dc119f5.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -26,7 +27,7 @@
                 </button>
             </div>
             <ul class="menuList">
-                <li class="menuList__item"><a class="menuList__item-link" href="#aboutus">O mnie</a></li>
+                <li class="menuList__item"><a class="menuList__item-link" href="#aboutus">O biurze</a></li>
                 <li class="menuList__item"><a class="menuList__item-link" href="#services">Usługi</a></li>
                 <!-- <li><a href="prices">Cennik</a></li> -->
                 <li class="menuList__item"><a class="menuList__item-link" href="#contact">Kontakt</a></li>
@@ -34,50 +35,32 @@
         </div>
     </nav>
 
-    
 
-    <header>
-        <video autoplay muted playsinline class="heroImg">
+
+    <header class="header">
+        <video autoplay muted playsinline class="header__hero-video">
             <source src="./video/sky.mp4" type="video/mp4">
-
         </video>
-        <div class="heroText wrapper">
-            <p>Witaj w</p>
-            <h1>Contalinea</h1>
-            <p>profesjonalnym biurze rachunkowym, prowadzącym księgowość w najlepszym wydaniu przy wykorzystaniu
+        <div class="header__hero-text wrapper">
+            <p class="heading-sub">Witaj w</p>
+            <h1 class="heading-main">Contalinea</h1>
+            <p class="heading-sub">profesjonalnym biurze rachunkowym, prowadzącym księgowość w najlepszym wydaniu przy
+                wykorzystaniu
                 nowoczesnych programów i sposobów komunikacji. </p>
         </div>
         <div class="language">
-            <div class="circle flagen"></div>
-            <div class="circle flagpl"></div>
-            <div class="circle flages"></div>
+            <div class="language__circle flagen"></div>
+            <div class="language__circle flagpl"></div>
+            <div class="language__circle flages"></div>
         </div>
     </header>
 
     <main>
-
         <section id="aboutus" class="aboutus sections">
-
-
             <h2 class="section-header">O biurze</h2>
-
-
-
             <div class="wrapper">
-                <div class="displayview">
-                    <!-- <div class="aboutcard">
-                        <div class="abouttext">
-                            <h3>Żaneta Ziółkowska</h3>
-                            <p>Krótka informacja o Pani i np Pani doświadczeniu </p>
-
-                        </div>
-                    </div>
-                    <div class="aboutdisplaytext">
-                        <h3>Żaneta Ziółkowska</h3>
-                        <p>Krótka informacja o Pani i np Pani doświadczeniu</p>
-                    </div> -->
-                </div>
-                <p class="officeInfo">Biuro rachunkowe Contalinea oferuje pełną obsługę księgową i kadrową w formie
+                <p class="aboutus__office-info">Biuro rachunkowe Contalinea oferuje pełną obsługę księgową i kadrową w
+                    formie
                     online, bez wychodzenia z domu i zbędnego generowania dokumentacji papierowej.<br> Pracujemy na
                     nowoczesnej platformie internetowej, która na życzenie klienta zapewnia stały dostęp do danych
                     finansowych jego firmy. <br>
@@ -103,46 +86,79 @@
 
             <div class="wrapper">
 
-                <div class="accordeon">
-                    <div class="accordeon-box">
-                        <button class="accordeon-btn">Księga Handlowa</button>
-                        <div class="accordeon-info">
-                            <p class="accordeon-info-text"><span>Dla kogo?</span><br>
-                                Obowiązek prowadzenia pełnej księgowości w postaci ksiąg handlowych spoczywa na spółkach
-                                handlowych oraz spółkach cywilnych i osobach fizycznych, których wartość przychodów za
-                                rok poprzedni przekroczyła 2 mln euro.</p>
+
+                <div data-aos="zoom-in">
+                    <div class="accordeon">
+                        <div class="accordeon__box">
+                            <button class="accordeon__btn">Księga Handlowa</button>
+                            <div class="accordeon__box-info">
+                                <p class="info-text"><span>Dla kogo?</span><br>
+                                    Obowiązek prowadzenia pełnej księgowości w postaci ksiąg handlowych spoczywa na
+                                    spółkach
+                                    handlowych oraz spółkach cywilnych i osobach fizycznych, których wartość przychodów
+                                    za
+                                    rok poprzedni przekroczyła 2 mln euro.</p>
+                                <div class="info-prices">
+                                    <span>Cennik</span>
+                                    <ul> 
+                                        <li>1-20 dokumentów 600,00 PLN</li> 
+                                        <li>21-40 dokumentów 700,00 PLN</li> 
+                                        <li>41-50 dokumentów 800,00 PLN</li> 
+                                        <li>51-60 dokumentów 900,00 PLN</li> 
+                                        <li>61-70 dokumentów 1000,00 PLN</li> 
+                                        <li>71-80 dokumentów 1100,00 PLN</li> 
+                                        <li>81-100 dokumentów 12000,00 PLN</li> 
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
+                        <div class="accordeon__box">
+                            <button class="accordeon__btn">Księga Przychodów i Rozchodów</button>
+                            <div class="accordeon__box-info">
+                                <p class="info-text"> <span>Dla kogo?</span><br>
+                                    Obowiązek ten dotyczy przedsiębiorców prowadzących jednoosobowe działalności
+                                    gospodarcze, którzy jako formę opodatkowania przychodu wybrały zasady ogólne lub
+                                    podatek
+                                    liniowy, spółek jawnych, partnerskich i cywilnych, których przychody za poprzedni
+                                    rok
+                                    obrotowy nie przekroczyły 2 mln euro.</p>
+                                    <div class="info-prices">
+                                        <span>Cennik</span>
+                                        <ul> 
+                                            <li>1-20 dokumentów 600,00 PLN</li> 
+                                            <li>21-40 dokumentów 700,00 PLN</li> 
+                                            <li>41-50 dokumentów 800,00 PLN</li> 
+                                            <li>51-60 dokumentów 900,00 PLN</li> 
+                                            <li>61-70 dokumentów 1000,00 PLN</li> 
+                                            <li>71-80 dokumentów 1100,00 PLN</li> 
+                                            <li>81-100 dokumentów 12000,00 PLN</li> 
+                                        </ul>
+                                    </div>
+                            </div>
 
-                    </div>
-                    <div class="accordeon-box">
-                        <button class="accordeon-btn">Księga Przychodów i Rozchodów</button>
-                        <div class="accordeon-info">
-                            <p class="accordeon-info-text"> <span>Dla kogo?</span><br>
-                                Obowiązek ten dotyczy przedsiębiorców prowadzących jednoosobowe działalności
-                                gospodarcze, którzy jako formę opodatkowania przychodu wybrały zasady ogólne lub podatek
-                                liniowy, spółek jawnych, partnerskich i cywilnych, których przychody za poprzedni rok
-                                obrotowy nie przekroczyły 2 mln euro.</p>
                         </div>
+                        <div class="accordeon__box">
+                            <button class="accordeon__btn">Ewidencja Ryczałtowa</button>
+                            <div class="accordeon__box-info">
+                                <p class="info-text"><span>Dla kogo?</span><br>
+                                    Ewidencję ryczałtową powinni prowadzić przedsiębiorcy, którzy jako formę
+                                    opodatkowania
+                                    przychodu wybrali ryczałt.</p>
+                            </div>
 
-                    </div>
-                    <div class="accordeon-box">
-                        <button class="accordeon-btn">Ryczałt</button>
-                        <div class="accordeon-info">
-                            <p class="accordeon-info-text"><span>Dla kogo?</span><br>
-                                Ewidencję ryczałtową powinni prowadzić przedsiębiorcy, którzy jako formę opodatkowania
-                                przychodu wybrali ryczałt.</p>
                         </div>
+                        <div class="accordeon__box">
+                            <button class="accordeon__btn">Kadry i Płace</button>
+                            <div class="accordeon__box-info">
+                                <p class="info-text"><span>Dla kogo?</span><br>
 
-                    </div>
-                    <div class="accordeon-box">
-                        <button class="accordeon-btn">Kadry i Płace</button>
-                        <div class="accordeon-info">
-                            <p class="accordeon-info-text"><span>Dla kogo?</span><br>
+                                    Prowadzenie kadr i płac jest obowiązkiem każdego przedsiębiorcy, który zatrudnia
+                                    choćby
+                                    jednego pracownika, bez względu na rodzaj umowy.</p>
+                            </div>
 
-                                Prowadzenie kadr i płac jest obowiązkiem każdego przedsiębiorcy, który zatrudnia choćby
-                                jednego pracownika, bez względu na rodzaj umowy.</p>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -152,7 +168,7 @@
 
 
 
-        <section id="contact" class="contactbg sections">
+        <section class="contact sections">
             <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 230">
                 <path fill="#dde5e6" fill-opacity="1"
                     d="M0,224L48,218.7C96,213,192,203,288,208C384,213,480,235,576,229.3C672,224,768,192,864,165.3C960,139,1056,117,1152,122.7C1248,128,1344,160,1392,176L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
@@ -163,7 +179,7 @@
 
             <div class="wrapper">
                 <div class="contact">
-                    <div class="contactForm">
+                    <div class="contact__form">
                         <form action="https://formspree.io/f/xoqrjnwv" method="POST">
                             <label for="username">Podaj imię i nazwisko:</label>
                             <input type="text" id="username" name="name" placeholder="Podaj swoje dane">
@@ -185,8 +201,8 @@
                             <button type="submit">Wyślij</button>
                             <input type="hidden" name="_next" value="https://www.google.pl/" />
                         </form>
-                        <div class="adress">
-                            <div class="adresInfo">
+                        <div class="contact__adress">
+                            <div class="contact__adress-info">
                                 <p class="mainp">Telefon:</p>
                                 <a href="tel:+48516723238">(+48) 516 723 238</a>
                                 <p class="mainp">E-mail:</p>
@@ -215,7 +231,8 @@
         </div>
     </footer>
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/aossettings.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

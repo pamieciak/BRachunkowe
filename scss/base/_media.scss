@@ -1,0 +1,82 @@
+@media (min-width: 768px) {
+	.section-header {
+		font-size: 5rem;
+	}
+	// Nawigacja
+
+	.nav {
+		.burger-menu__logo {
+			font-size: 3rem;
+		}
+	}
+
+	.menuList {
+		&__item {
+			&-link {
+				font-size: 5rem;
+			}
+		}
+	}
+
+	// Header
+	.header {
+		.header__hero-text {
+			.heading-sub {
+				font-size: 2.6rem;
+                padding: 0 2rem;
+			}
+            .heading-main{
+                font-size: 7rem;
+            }
+		}
+
+    }
+
+	// O MNIE====================
+
+	.displayview {
+		display: flex;
+		justify-content: center;
+		padding: 0 2em;
+
+		.aboutcard {
+			height: 400px;
+			width: 30%;
+		}
+		.abouttext {
+			display: none;
+		}
+	}
+	.aboutdisplaytext {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		width: 50%;
+		color: black;
+
+		h3 {
+			margin-bottom: 4rem;
+			font-size: 5rem;
+		}
+
+		p {
+			font-size: 2rem;
+		}
+	}
+	.officeInfo {
+		font-size: 2.2rem;
+		padding: 3rem;
+	}
+
+	// Services!
+	.accordeon-btn {
+		font-size: 3rem;
+	}
+
+	.accordeon-info {
+		.accordeon-info-text {
+			font-size: 2rem;
+		}
+	}
+}

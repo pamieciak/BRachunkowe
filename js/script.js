@@ -6,7 +6,7 @@ const menuList = document.querySelector(".menuList");
 const menuItems = document.querySelectorAll("li a");
 const nav = document.querySelector("nav");
 const accordeon = document.querySelector(".accordeon");
-const accBtn = document.querySelectorAll(".accordeon-btn");
+const accBtn = document.querySelectorAll(".accordeon__btn");
 
 
 function openAccordeonItems() {
@@ -19,16 +19,16 @@ function openAccordeonItems() {
 }
 
 const closeAccordeon = () => {
-	const allActiveItems = document.querySelectorAll(".accordeon-info");
+	const allActiveItems = document.querySelectorAll(".accordeon__box-info");
 
 	allActiveItems.forEach(item => item.classList.remove("active"));
 };
 
 const clickOutside = e => {
 	if (
-		e.target.classList.contains("accordeon-btn") ||
-		e.target.classList.contains("accordeon-info") ||
-		e.target.classList.contains("accordeon-info-text")
+		e.target.classList.contains("accordeon__btn") ||
+		e.target.classList.contains("accordeon__box-info") ||
+		e.target.classList.contains("info-text")
 	) {
 		return;
 	}
@@ -50,6 +50,8 @@ const showMenu = () => {
 		item.addEventListener("click", showMenu);
 	});
 };
+
+
 
 accBtn.forEach(btn => btn.addEventListener("click", openAccordeonItems));
 window.addEventListener("click", clickOutside);

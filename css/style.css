@@ -51,16 +51,140 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  .section-header {
+    font-size: 5rem;
+  }
+  .nav .burger-menu__logo {
+    font-size: 3rem;
+  }
+  .menuList__item-link {
+    font-size: 5rem;
+  }
+  .header .header__hero-text .heading-sub {
+    font-size: 2.6rem;
+    padding: 0 2rem;
+  }
+  .header .header__hero-text .heading-main {
+    font-size: 7rem;
+  }
+  .displayview {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 2em;
+  }
+  .displayview .aboutcard {
+    height: 400px;
+    width: 30%;
+  }
+  .displayview .abouttext {
+    display: none;
+  }
+  .aboutdisplaytext {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    width: 50%;
+    color: black;
+  }
+  .aboutdisplaytext h3 {
+    margin-bottom: 4rem;
+    font-size: 5rem;
+  }
+  .aboutdisplaytext p {
+    font-size: 2rem;
+  }
+  .officeInfo {
+    font-size: 2.2rem;
+    padding: 3rem;
+  }
+  .accordeon-btn {
+    font-size: 3rem;
+  }
+  .accordeon-info .accordeon-info-text {
+    font-size: 2rem;
+  }
+}
+
 .nav {
   position: fixed;
-  z-index: 3;
   width: 100%;
   -webkit-transition: background-color 0.8s;
   transition: background-color 0.8s;
+  z-index: 3;
 }
 
 .move {
   background-color: rgba(3, 0, 1, 0.8);
+}
+
+.header {
+  position: relative;
+  overflow: hidden;
+}
+
+.header__hero-video {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -20;
+}
+
+.header__hero-text {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  z-index: 2;
+}
+
+.header__hero-text .heading-main {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.header__hero-text .heading-sub {
+  margin: 0.5em;
+  font-size: 2rem;
+}
+
+.aboutus {
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #030001), to(#412715));
+  background-image: linear-gradient(#030001 10%, #412715);
+}
+
+.aboutus__office-info {
+  margin: 2em 2em 0em 2em;
+  padding: 0.75rem;
+  text-align: justify;
+  font-size: 1.4rem;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.services {
+  position: relative;
+  background: #412715;
 }
 
 .burger-menu {
@@ -155,11 +279,6 @@ body {
           transform: translateX(-100%);
 }
 
-header {
-  position: relative;
-  overflow: hidden;
-}
-
 .language {
   position: absolute;
   display: -webkit-box;
@@ -170,7 +289,7 @@ header {
   z-index: 2;
 }
 
-.language .circle {
+.language__circle {
   width: 40px;
   height: 40px;
   border-radius: 40%;
@@ -194,117 +313,6 @@ header {
   background-image: url("../img/United_Kingdom.png");
 }
 
-.heroImg {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: -20;
-}
-
-.heroBg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: -2;
-}
-
-.heroText {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100vw;
-  height: 100vh;
-  color: white;
-  z-index: 2;
-}
-
-.heroText h1 {
-  font-size: 4rem;
-  text-transform: uppercase;
-}
-
-.heroText p {
-  margin: 0.5em;
-  font-size: 1.5rem;
-}
-
-.aboutus {
-  position: relative;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, black), to(#412715));
-  background-image: linear-gradient(black 10%, #412715);
-}
-
-.aboutcard {
-  position: relative;
-  margin: 2em 1em;
-  height: 400px;
-  background-image: url("../img/ruda1920.jpg");
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  -webkit-box-shadow: 0px 0px 15px #4b122c;
-          box-shadow: 0px 0px 15px #4b122c;
-  overflow: hidden;
-}
-
-.aboutcard .abouttext {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
-  height: 100px;
-  top: 75%;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  text-align: center;
-}
-
-.aboutcard .abouttext h3 {
-  font-size: 2rem;
-}
-
-.aboutcard .abouttext p {
-  padding: 0.2em 0.4em;
-  font-size: 1.3rem;
-}
-
-.officeInfo {
-  margin: 2em 2em 0em 2em;
-  padding: .75rem;
-  text-align: justify;
-  font-size: 1.4rem;
-  border-radius: 8px;
-  color: white;
-}
-
-.aboutdisplaytext {
-  display: none;
-}
-
-.services {
-  position: relative;
-  background: #412715;
-}
-
-.services h2 {
-  background: #412715;
-}
-
 .accordeon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -325,66 +333,112 @@ header {
   border-radius: 8px;
 }
 
-.accordeon-box {
+.accordeon__box {
+  position: relative;
   margin: 1rem;
-  -webkit-box-shadow: 0px 0px 5px #4b122c;
-          box-shadow: 0px 0px 5px #4b122c;
-  border-radius: 8px;
 }
 
-.accordeon-box span {
+.accordeon__box::before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  content: "";
+  font-size: 2rem;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+}
+
+.accordeon__box::after {
+  position: absolute;
+  content: "+";
+  right: 2%;
+  bottom: 10%;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.accordeon__box-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 0;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-transition: max-height 1s;
+  transition: max-height 1s;
+}
+
+.accordeon__box-info .info-text {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem;
+  color: black;
+}
+
+.accordeon__box-info .info-text span {
+  text-align: center;
   padding: 1em;
   font-size: 1.3em;
   font-weight: bold;
 }
 
-.accordeon-btn {
+.accordeon__box-info .info-prices {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem;
+  color: black;
+}
+
+.accordeon__box-info .info-prices span {
+  text-align: center;
+  padding: 1em;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.accordeon__box-info .info-prices li {
+  margin: 0.4rem;
+}
+
+.accordeon__btn {
   position: relative;
   padding: 1em;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   text-align: center;
   border: none;
-  border-radius: 6px;
-  background-color: rgba(255, 255, 255, 0.9);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background: none;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
-  color: black;
+  color: #fff;
   cursor: pointer;
 }
 
-.accordeon-btn:hover,
-.accordeon-btn:focus {
-  background-color: #00838F;
+.accordeon__btn:hover, .accordeon__btn:focus {
+  background-color: #00838f;
   color: white;
   outline: none;
 }
 
-.accordeon-info {
-  max-height: 0;
-  overflow: hidden;
-  border-radius: 6px;
-  -webkit-transition: max-height 1s;
-  transition: max-height 1s;
-}
-
-.accordeon-info .accordeon-info-text {
-  font-size: 1.2rem;
-  text-align: center;
-  padding: 1em 2em;
-  background-color: white;
-  color: black;
-}
-
 .active {
-  max-height: 700px;
+  max-height: 1000px;
   -webkit-transition: max-height 1s;
   transition: max-height 1s;
-}
-
-#contact {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #412715), to(black));
-  background-image: linear-gradient(#412715 30%, black);
 }
 
 .contact {
@@ -401,13 +455,15 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #412715), to(#030001));
+  background-image: linear-gradient(#412715 30%, #030001);
 }
 
-.contact .contactForm {
+.contact__form {
   width: 100%;
 }
 
-.contact .contactForm form {
+.contact__form form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -424,15 +480,15 @@ header {
   margin: 0 auto;
 }
 
-.contact .contactForm form label {
+.contact__form form label {
   font-size: 2rem;
   margin: 0.5em 1em;
   color: white;
 }
 
-.contact .contactForm form input,
-.contact .contactForm form select,
-.contact .contactForm form textarea {
+.contact__form form input,
+.contact__form form select,
+.contact__form form textarea {
   width: 80%;
   height: 40px;
   padding: 0.6em;
@@ -441,41 +497,30 @@ header {
   border-radius: 8px;
 }
 
-.contact .contactForm form input:hover,
-.contact .contactForm form select:hover,
-.contact .contactForm form textarea:hover {
-  -webkit-transition: -webkit-box-shadow 0.3s;
-  transition: -webkit-box-shadow 0.3s;
-  transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
-  -webkit-box-shadow: 0px 0px 7px #4b122c;
-          box-shadow: 0px 0px 7px #4b122c;
-}
-
-.contact .contactForm form select {
+.contact__form form select {
   text-align: center;
 }
 
-.contact .contactForm form textarea {
+.contact__form form textarea {
   max-width: 80%;
   min-width: 80%;
   width: 100%;
   min-height: 150px;
 }
 
-.contact .contactForm form button {
+.contact__form form button {
   margin-top: 1em;
   width: 200px;
   padding: 0.75em 1em;
   color: white;
   font-size: 1.5rem;
-  background-color: #00838F;
+  background-color: #00838f;
   border: none;
   border-radius: 8px;
   cursor: pointer;
 }
 
-.contact .adress {
+.contact__adress {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -489,11 +534,12 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   text-align: center;
 }
 
-.contact .adress .adresInfo {
+.contact__adress-info {
   margin-top: 2em;
   padding: 2em;
   border: 1px solid rgba(0, 0, 0, 0.178);
@@ -501,23 +547,23 @@ header {
   background-color: white;
 }
 
-.contact .adress .adresInfo a {
+.contact__adress-info a {
   font-size: 2rem;
   text-decoration: none;
   color: #4b122c;
 }
 
-.contact .adress .adresInfo .mainp {
+.contact__adress-info p {
+  font-size: 1.4em;
+}
+
+.contact__adress-info .mainp {
   padding: 0.5em;
   font-size: 1.4em;
   font-weight: bold;
 }
 
-.contact .adress .adresInfo p {
-  font-size: 1.4em;
-}
-
-.contact .adress .adresInfo .pinfo {
+.contact__adress-info .pinfo {
   margin-top: 1em;
   font-weight: bold;
   text-transform: uppercase;
@@ -547,76 +593,6 @@ footer {
   text-align: center;
   font-size: 2rem;
   color: white;
-}
-
-@media (min-width: 768px) {
-  .section-header {
-    font-size: 5rem;
-  }
-  .burgerMenu a {
-    font-size: 2.2rem;
-  }
-  ul > li {
-    font-size: 3rem;
-  }
-  .heroText h1 {
-    font-size: 6rem;
-  }
-  .heroText p {
-    font-size: 2.5rem;
-  }
-  .circle {
-    width: 70px;
-    height: 70px;
-  }
-  .displayview {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 0 2em;
-  }
-  .displayview .aboutcard {
-    height: 400px;
-    width: 30%;
-  }
-  .displayview .abouttext {
-    display: none;
-  }
-  .aboutdisplaytext {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-align: center;
-    width: 50%;
-    color: black;
-  }
-  .aboutdisplaytext h3 {
-    margin-bottom: 4rem;
-    font-size: 5rem;
-  }
-  .aboutdisplaytext p {
-    font-size: 2rem;
-  }
-  .officeInfo {
-    font-size: 2.2rem;
-    padding: 3rem;
-  }
-  .accordeon-btn {
-    font-size: 3rem;
-  }
-  .accordeon-info .accordeon-info-text {
-    font-size: 2rem;
-  }
 }
 
 @media (min-width: 992px) {

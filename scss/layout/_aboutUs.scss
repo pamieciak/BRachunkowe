@@ -1,0 +1,13 @@
+.aboutus {
+	position: relative;
+	background-image: linear-gradient($color-bg 10%, #412715);
+
+	&__office-info {
+		margin: 2em 2em 0em 2em;
+		padding: 0.75rem;
+		text-align: justify;
+		font-size: 1.4rem;
+		border-radius: 8px;
+		color: $color-white;
+	}
+}

@@ -1,0 +1,35 @@
+.header {
+	position: relative;
+	overflow: hidden;
+
+        &__hero-video {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;             
+            z-index: -20;
+        }
+        
+        
+        &__hero-text {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100vw;
+            height: 100vh;
+            color: $color-white;
+            z-index: 2;
+        
+            .heading-main {
+                font-size: 4rem;
+                text-transform: uppercase;
+            }
+            .heading-sub {
+                margin: 0.5em;
+                font-size: 2rem;
+            }
+        }
+        
+    }
