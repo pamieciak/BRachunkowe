@@ -22,7 +22,7 @@ body {
 }
 
 .section-header {
-  padding: 1.5em 0em;
+  padding: 1.5em 0em 2em 0em;
   text-align: center;
   text-transform: uppercase;
   font-size: 3rem;
@@ -30,6 +30,8 @@ body {
 }
 
 .sections {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #030001), color-stop(#412715), to(#030001));
+  background-image: linear-gradient(#030001 5%, #412715, #030001);
   scroll-margin-top: 5rem;
 }
 
@@ -169,22 +171,38 @@ body {
 
 .aboutus {
   position: relative;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #030001), to(#412715));
-  background-image: linear-gradient(#030001 10%, #412715);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #030001), color-stop(#412715), to(#030001));
+  background-image: linear-gradient(#030001 10%, #412715, #030001);
 }
 
 .aboutus__office-info {
-  margin: 2em 2em 0em 2em;
+  margin: 2rem 1rem 0rem 1rem;
   padding: 0.75rem;
   text-align: justify;
-  font-size: 1.4rem;
-  border-radius: 8px;
+  font-size: 1.5rem;
   color: #fff;
+}
+
+.aboutus__office-info:last-child {
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+.aboutus__office-info span {
+  font-weight: bold;
+}
+
+.aboutus .info-list li {
+  margin: 0.2rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.7rem;
+  list-style: none;
 }
 
 .services {
   position: relative;
-  background: #412715;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #030001), color-stop(70%, #412715), to(#030001));
+  background-image: linear-gradient(#030001 20%, #412715 70%, #030001);
 }
 
 .burger-menu {
@@ -321,16 +339,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #412715;
-  border-radius: 8px;
+  background-color: transparent;
 }
 
 .accordeon__box {
@@ -385,7 +402,7 @@ body {
   font-size: 1.2rem;
   text-align: center;
   padding: 1rem;
-  color: black;
+  color: #030001;
 }
 
 .accordeon__box-info .info-text span {
@@ -399,7 +416,7 @@ body {
   font-size: 1.2rem;
   text-align: center;
   padding: 1rem;
-  color: black;
+  color: #030001;
 }
 
 .accordeon__box-info .info-prices span {
@@ -420,8 +437,8 @@ body {
   font-size: 1.4rem;
   text-align: center;
   border: none;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
   background: none;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -455,8 +472,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #412715), to(#030001));
-  background-image: linear-gradient(#412715 30%, #030001);
 }
 
 .contact__form {
@@ -481,7 +496,7 @@ body {
 }
 
 .contact__form form label {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 0.5em 1em;
   color: white;
 }
@@ -489,6 +504,7 @@ body {
 .contact__form form input,
 .contact__form form select,
 .contact__form form textarea {
+  margin-bottom: 1rem;
   width: 80%;
   height: 40px;
   padding: 0.6em;
@@ -509,8 +525,8 @@ body {
 }
 
 .contact__form form button {
-  margin-top: 1em;
-  width: 200px;
+  margin-top: 1rem;
+  width: 80%;
   padding: 0.75em 1em;
   color: white;
   font-size: 1.5rem;
@@ -534,14 +550,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
 .contact__adress-info {
   margin-top: 2em;
-  padding: 2em;
+  padding: 1rem 0rem 1rem 0rem;
+  width: 90%;
   border: 1px solid rgba(0, 0, 0, 0.178);
   border-radius: 8px;
   background-color: white;

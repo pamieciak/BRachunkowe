@@ -1,13 +1,29 @@
 .aboutus {
 	position: relative;
-	background-image: linear-gradient($color-bg 10%, #412715);
+	background-image: linear-gradient($color-bg 10%, $color-secoundary,$color-bg);
 
 	&__office-info {
-		margin: 2em 2em 0em 2em;
+		
+		margin: 2rem 1rem 0rem 1rem;
 		padding: 0.75rem;
 		text-align: justify;
-		font-size: 1.4rem;
-		border-radius: 8px;
+		font-size: 1.5rem;
 		color: $color-white;
+
+		&:last-child{
+			margin: 0rem 1rem 0rem 1rem;
+		}
+
+		span{
+			font-weight: bold;
+			// text-decoration: underline;
+		}
+	}
+	.info-list li{
+		margin: 0.2rem;
+		text-align: center;
+		color: $color-white;
+		font-size: 1.7rem;
+		list-style: none;
 	}
 }
