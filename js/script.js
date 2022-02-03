@@ -12,38 +12,38 @@ const nav = document.querySelector("nav");
 const accordeon = document.querySelector(".accordeon");
 const accBtn = document.querySelectorAll(".accordeon__btn");
 
-function openAccordeonItems() {
+// function openAccordeonItems() {
 	
 
 	
-	if (this.nextElementSibling.classList.contains("active") ) {
-		this.nextElementSibling.classList.remove("active")
+// 	if (this.nextElementSibling.classList.contains("active") ) {
+// 		this.nextElementSibling.classList.remove("active")
 	
-	} else {
-		closeAccordeon();
-		this.nextElementSibling.classList.toggle("active");
+// 	} else {
+// 		closeAccordeon();
+// 		this.nextElementSibling.classList.toggle("active");
 
-	}
+// 	}
 	
-}
+// }
 
-const closeAccordeon = () => {
-	const allActiveItems = document.querySelectorAll(".accordeon__box-info");
+// const closeAccordeon = () => {
+// 	const allActiveItems = document.querySelectorAll(".accordeon__box-info");
 
-	allActiveItems.forEach(item => item.classList.remove("active"));
-};
+// 	allActiveItems.forEach(item => item.classList.remove("active"));
+// };
 
-const clickOutside = e => {
-	if (
-		e.target.classList.contains("accordeon__btn") ||
-		e.target.classList.contains("accordeon__box-info") ||
-		e.target.classList.contains("info-text")
-	) {
-		return;
-	}
+// const clickOutside = e => {
+// 	if (
+// 		e.target.classList.contains("accordeon__btn") ||
+// 		e.target.classList.contains("accordeon__box-info") ||
+// 		e.target.classList.contains("info-text")
+// 	) {
+// 		return;
+// 	}
 
-	closeAccordeon();
-};
+// 	closeAccordeon();
+// };
 
 const handleNav = () => {
 	nav.classList.toggle("move", window.scrollY > 0);
@@ -60,14 +60,15 @@ const showMenu = () => {
 	});
 };
 
-const changeArrow = () => {
-	arrowDown.forEach(arr => arr.classList.add('hide'));
-	console.log(arrowDown);
-}
+const faqs = document.querySelectorAll('.faq')
 
-accBtn.forEach(btn =>
-	btn.addEventListener("click", openAccordeonItems)
-);
+faqs.forEach(faq => faq.addEventListener('click', () => {
+	faq.classList.toggle('active')
+}))
+
+// accBtn.forEach(btn =>
+// 	btn.addEventListener("click", openAccordeonItems)
+// );
 window.addEventListener("click", clickOutside);
 window.addEventListener("scroll", handleNav);
 menuBtn.addEventListener("click", showMenu);
