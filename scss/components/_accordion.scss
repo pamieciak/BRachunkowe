@@ -7,33 +7,15 @@
 	align-items: center;
 	background-color: transparent;
 	// border-radius: 8px;
-
+	
 	&__box {
 		position: relative;
 		margin: 1rem;
-
-		&::before {
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			transform: translate(-50%);
-			content: "";
-			font-size: 2rem;
-			color: $color-white;
-			border-bottom: 1px solid $color-white;
-			width: 100%;
-		}
-
-		&::after {
-			position: absolute;
-			content: "+";
-			right: 2%;
-			bottom: 10%;
-			font-size: 2.5rem;
-			color: $color-white;
-		}
-
+		
+		
+		
 		&-info {
+			// position: relative;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -42,44 +24,62 @@
 			overflow: hidden;
             // border-top-left-radius: 15px;
             // border-top-right-radius: 15px;
-			background-color: $color-white;
-			transition: max-height 1s;
+			// background-color: $color-white;
+			transition: max-height .5s;
 
+		
+
+			// i{
+			// position:absolute ;
+			// top: 0;
+			// right: 0;
+			// color: #fff;
+			// font-size: 2rem;
+			// transition: all 0.1s;
+			// z-index: 1025;
+			// }
+		
+		
+		
+			
 			.info-text {
 				
 				font-size: 1.2rem;
 				text-align: center;
 				padding: 1rem;				
-				color: $color-bg;
+				color: $color-white;
+				// width: 70rem;
+				
 				span {
+					margin: 1rem;
 					text-align: center;
 					padding: 1em;
 					font-size: 1.3em;
 					font-weight: bold;
-                    color: $color-bg;
+                    color: $color-white;
 				}
 			}
 			.info-prices{
 				font-size: 1.2rem;
 				text-align: center;
 				padding: 1rem;				
-				color: $color-bg;
-
+				color: $color-white;
+				
 				span{
 					text-align: center;
 					padding: 1em;
 					font-size: 1.3em;
 					font-weight: bold;
-                    color: $color-bg;
+                    color: $color-white;
 				}
-
+				
 				li{
 					margin: 0.4rem;
 				}
 			}
 		}
 	}
-
+	
 	&__btn {
 		position: relative;
 		padding: 1em;
@@ -93,20 +93,51 @@
 		transition: background-color 0.3s;
 		color: $color-white;
 		cursor: pointer;
+		transition: all 1s;
+		
 
-		// &:hover,
-        // &:focus{
-		// 	background-color: #00838f;
-		// 	color: white;
-		// 	outline: none;
-		// }
+		&::before{
+			content: "";
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			border-bottom: 1px solid white;
+			width: 100%;
+		}
 
+		i{
+			
+			margin-left: 1rem;	
+		}
+
+		&:focus
+		 {
+			
+			i{
+				transform: rotate(180deg);
+			}
+		}
+		
+	
+	
+			
+		}
 	}
-}
+	
 
 
 
 .active {
+
 	max-height: 1000px;
 	transition: max-height 1s;
 }
+
+.active i{
+
+	transform: rotate(180deg);
+	
+}
+
+
+

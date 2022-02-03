@@ -1,22 +1,29 @@
 const menuBtn = document.querySelector(".burger-menu__menuBtn");
-const logo = document.querySelector('.burger-menu__logo');
+const logo = document.querySelector(".burger-menu__logo");
+
 const barsBtn = document.querySelector(".fa-bars");
 const xBtn = document.querySelector(".fa-times");
+const arrowDown = document.querySelectorAll(".fa-chevron-down");
+const arrowUp = document.querySelectorAll(".fa-chevron-up");
+
 const menuList = document.querySelector(".menuList");
 const menuItems = document.querySelectorAll("li a");
 const nav = document.querySelector("nav");
 const accordeon = document.querySelector(".accordeon");
 const accBtn = document.querySelectorAll(".accordeon__btn");
 
-
 function openAccordeonItems() {
-	if (this.nextElementSibling.classList.contains("active")) {
-		this.nextElementSibling.classList.remove("active");
+	
+
+	
+	if (this.nextElementSibling.classList.contains("active") ) {
+		this.nextElementSibling.classList.remove("active")
+	
 	} else {
 		closeAccordeon();
 		this.nextElementSibling.classList.toggle("active");
-	}
 
+	}
 	
 }
 
@@ -53,9 +60,14 @@ const showMenu = () => {
 	});
 };
 
+const changeArrow = () => {
+	arrowDown.forEach(arr => arr.classList.add('hide'));
+	console.log(arrowDown);
+}
 
-
-accBtn.forEach(btn => btn.addEventListener("click",  openAccordeonItems, btn.classList.toggle('clicked')));
+accBtn.forEach(btn =>
+	btn.addEventListener("click", openAccordeonItems)
+);
 window.addEventListener("click", clickOutside);
 window.addEventListener("scroll", handleNav);
 menuBtn.addEventListener("click", showMenu);

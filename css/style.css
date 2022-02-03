@@ -70,53 +70,33 @@ body {
   .header .header__hero-text .heading-main {
     font-size: 7rem;
   }
-  .displayview {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 0 2em;
-  }
-  .displayview .aboutcard {
-    height: 400px;
-    width: 30%;
-  }
-  .displayview .abouttext {
-    display: none;
-  }
-  .aboutdisplaytext {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  #aboutus p {
+    margin: 0rem 2rem 0rem 2rem;
+    padding: 2rem;
+    font-size: 2rem;
     text-align: center;
-    width: 50%;
-    color: black;
   }
-  .aboutdisplaytext h3 {
-    margin-bottom: 4rem;
-    font-size: 5rem;
-  }
-  .aboutdisplaytext p {
+  #aboutus .info-list li {
     font-size: 2rem;
   }
-  .officeInfo {
+  .services .accordeon__box-info .info-text {
+    margin-top: 1rem;
+    padding: 0rem 4rem 0rem 4rem;
+    font-size: 1.8rem;
+  }
+  .services .accordeon__box-info .info-prices {
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+  }
+  .services .accordeon__btn {
     font-size: 2.2rem;
-    padding: 3rem;
   }
-  .accordeon-btn {
-    font-size: 3rem;
-  }
-  .accordeon-info .accordeon-info-text {
-    font-size: 2rem;
+  .services .active {
+    max-height: 1000px;
+    -webkit-transition: max-height 1s;
+    transition: max-height 1s;
   }
 }
 
@@ -176,15 +156,11 @@ body {
 }
 
 .aboutus__office-info {
-  margin: 2rem 1rem 0rem 1rem;
+  margin: 1rem 1rem 0rem 1rem;
   padding: 0.75rem;
   text-align: justify;
   font-size: 1.5rem;
   color: #fff;
-}
-
-.aboutus__office-info:last-child {
-  margin: 0rem 1rem 0rem 1rem;
 }
 
 .aboutus__office-info span {
@@ -355,28 +331,6 @@ body {
   margin: 1rem;
 }
 
-.accordeon__box::before {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  content: "";
-  font-size: 2rem;
-  color: #fff;
-  border-bottom: 1px solid #fff;
-  width: 100%;
-}
-
-.accordeon__box::after {
-  position: absolute;
-  content: "+";
-  right: 2%;
-  bottom: 10%;
-  font-size: 2.5rem;
-  color: #fff;
-}
-
 .accordeon__box-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -393,31 +347,31 @@ body {
           align-items: center;
   max-height: 0;
   overflow: hidden;
-  background-color: #fff;
-  -webkit-transition: max-height 1s;
-  transition: max-height 1s;
+  -webkit-transition: max-height .5s;
+  transition: max-height .5s;
 }
 
 .accordeon__box-info .info-text {
   font-size: 1.2rem;
   text-align: center;
   padding: 1rem;
-  color: #030001;
+  color: #fff;
 }
 
 .accordeon__box-info .info-text span {
+  margin: 1rem;
   text-align: center;
   padding: 1em;
   font-size: 1.3em;
   font-weight: bold;
-  color: #030001;
+  color: #fff;
 }
 
 .accordeon__box-info .info-prices {
   font-size: 1.2rem;
   text-align: center;
   padding: 1rem;
-  color: #030001;
+  color: #fff;
 }
 
 .accordeon__box-info .info-prices span {
@@ -425,7 +379,7 @@ body {
   padding: 1em;
   font-size: 1.3em;
   font-weight: bold;
-  color: #030001;
+  color: #fff;
 }
 
 .accordeon__box-info .info-prices li {
@@ -446,12 +400,37 @@ body {
   transition: background-color 0.3s;
   color: #fff;
   cursor: pointer;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.accordeon__btn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+
+.accordeon__btn i {
+  margin-left: 1rem;
+}
+
+.accordeon__btn:focus i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .active {
   max-height: 1000px;
   -webkit-transition: max-height 1s;
   transition: max-height 1s;
+}
+
+.active i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .contact {
