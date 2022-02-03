@@ -12,6 +12,7 @@ const nav = document.querySelector("nav");
 const accordeon = document.querySelector(".accordeon");
 const accBtn = document.querySelectorAll(".accordeon__btn");
 
+const faqs = document.querySelectorAll('.faq')
 // function openAccordeonItems() {
 	
 
@@ -60,15 +61,14 @@ const showMenu = () => {
 	});
 };
 
-const faqs = document.querySelectorAll('.faq')
 
-faqs.forEach(faq => faq.addEventListener('click', () => {
-	faq.classList.toggle('active')
-}))
 
 // accBtn.forEach(btn =>
 // 	btn.addEventListener("click", openAccordeonItems)
 // );
-window.addEventListener("click", clickOutside);
+faqs.forEach(faq => faq.addEventListener('click', () => {
+	faq.classList.toggle('active')
+}))
+// window.addEventListener("click", clickOutside);
 window.addEventListener("scroll", handleNav);
 menuBtn.addEventListener("click", showMenu);
