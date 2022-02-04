@@ -74,18 +74,18 @@
 				justify-content: center;
 				width: 85%;
 				margin: 0;
-	
+
 				form {
 					width: 100%;
 					margin: 0;
 					bottom: 0;
 
-					label{
+					label {
 						font-size: 1.8rem;
 					}
 				}
 			}
-	
+
 			&__adress {
 				width: 50%;
 				&-info {
@@ -106,26 +106,37 @@
 			font-size: 2rem;
 			text-align: center;
 		}
-}
-#contact {
-	.contact {
-	
-		&__adress {
-			width: 50%;
-			&-info {
-				margin: auto 0;
-				width: 100%;
-				height: 60%;
+	}
 
-				a{
-					font-size: 2.5rem;
-					padding: 0rem 1rem; 
-				}
-				p{
-					font-size: 1.8rem;
+	.services {
+		.accordeon {
+			&__text {
+				&-list {
+					.price-table {
+						width: 50%;
+					}
 				}
 			}
 		}
 	}
-}
+	#contact {
+		.contact {
+			&__adress {
+				width: 50%;
+				&-info {
+					margin: auto 0;
+					width: 100%;
+					height: 60%;
+
+					a {
+						font-size: 2.5rem;
+						padding: 0rem 1rem;
+					}
+					p {
+						font-size: 1.8rem;
+					}
+				}
+			}
+		}
+	}
 }

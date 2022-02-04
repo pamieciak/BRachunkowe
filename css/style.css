@@ -153,6 +153,9 @@ body {
     font-size: 2rem;
     text-align: center;
   }
+  .services .accordeon__text-list .price-table {
+    width: 50%;
+  }
   #contact .contact__adress {
     width: 50%;
   }
