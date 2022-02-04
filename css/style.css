@@ -153,6 +153,21 @@ body {
     font-size: 2rem;
     text-align: center;
   }
+  #contact .contact__adress {
+    width: 50%;
+  }
+  #contact .contact__adress-info {
+    margin: auto 0;
+    width: 100%;
+    height: 60%;
+  }
+  #contact .contact__adress-info a {
+    font-size: 2.5rem;
+    padding: 0rem 1rem;
+  }
+  #contact .contact__adress-info p {
+    font-size: 1.8rem;
+  }
 }
 
 .nav {

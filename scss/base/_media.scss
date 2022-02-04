@@ -107,4 +107,25 @@
 			text-align: center;
 		}
 }
+#contact {
+	.contact {
+	
+		&__adress {
+			width: 50%;
+			&-info {
+				margin: auto 0;
+				width: 100%;
+				height: 60%;
+
+				a{
+					font-size: 2.5rem;
+					padding: 0rem 1rem; 
+				}
+				p{
+					font-size: 1.8rem;
+				}
+			}
+		}
+	}
+}
 }
