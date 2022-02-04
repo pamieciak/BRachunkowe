@@ -3,13 +3,11 @@
 		font-size: 5rem;
 	}
 	// Nawigacja
-
 	.nav {
 		.burger-menu__logo {
 			font-size: 3rem;
 		}
 	}
-
 	.menuList {
 		&__item {
 			&-link {
@@ -17,7 +15,6 @@
 			}
 		}
 	}
-
 	// Header
 	.header {
 		.header__hero-text {
@@ -30,7 +27,6 @@
 			}
 		}
 	}
-
 	// O Biurze====================
 	// niestety trzeba zastosować ID
 	#aboutus {
@@ -45,59 +41,59 @@
 			font-size: 2rem;
 		}
 	}
-
 	// ACCORDEON
+	.services {
+		.accordeon {
+			&__title {
+				font-size: 2.5rem;
+			}
+			&__text {
+				p {
+					font-size: 2rem;
+				}
+				span {
+					font-size: 2.2rem;
+				}
 
-.services {
+				&-list {
+					font-size: 2rem;
 
-	.accordeon {
-        
-        
-        &__box {
-           
-            
-            
-            
-            &-info {
-             
-            
-            
-                
-                .info-text {
-                    margin-top: 1rem;
-                    padding: 0rem 4rem 0rem 4rem;
-                    font-size: 1.8rem;
+					.price-table {
+						width: 60%;
+					}
+				}
+			}
+		}
+	}
 
-                  
-                    // width: 70rem;
-                    
-                
-                }
-                .info-prices{
-                    font-size: 1.8rem;
-                    text-align: center;
-                    padding: 1rem;				
-                    color: $color-white;
-                    
-                }
-            }
-        }
-        
-        &__btn {
-          
-            font-size: 2.2rem;
-          
-            
-        
-                
-            }
-        }
-        .active {
-        
-            max-height: 1000px;
-            transition: max-height 1s;
-        }
+	// ponownie konieczna większa specyficzność
+	#contact {
+		.contact {
+			&__form {
+				display: flex;
+				justify-content: center;
+				width: 85%;
+				margin: 0;
+	
+				form {
+					width: 100%;
+					margin: 0;
+					bottom: 0;
+				}
+			}
+	
+			&__adress {
+				width: 50%;
+				&-info {
+					margin: auto 0;
+					width: 100%;
+					height: 60%;
+				}
+			}
+		}
 	}
 }
 
-
+// @media (min-width: 992px) {
+// 	// musiałem nadac większą specyficzność poprzez ID
+// }

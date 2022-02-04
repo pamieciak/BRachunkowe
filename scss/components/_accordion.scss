@@ -1,64 +1,82 @@
-.faq{
+.accordeon {
 	margin: 3rem auto;
 	margin-bottom: 1rem;
 	width: 80%;
 	padding-bottom: 1rem;
 	font-size: 2rem;
-	border-bottom: 2px solid white;
+	border-bottom: 2px solid $color-white;
 	cursor: pointer;
 	overflow: hidden;
 
-
-}
-
-.question{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	color: white;
-}
-.answer{
-	max-height: 0;
-	overflow: hidden;
-	color: white;
-	transition: max-height .5s;
-}
-
-.answer p{
-	text-align: center;
-	color: white;
-	font-size: 1.5rem;
-	padding-top: 1rem;
-	line-height: 1.6;
-
-}
-
-.answer ul {
-	text-align: center;
-	font-size: 1.5rem;
-}
-
-.faq.active .answer{
-	max-height: 700px;	
-	animation: fade 1s;
-
-}
-
-.faq.active i {
-	transform: rotate(-180deg);
-}
-
-i{
-	transition: transform .5s;
-}
-
-@keyframes fade {
-	from{
-		opacity: 0;
-		transform: translateY(200px);
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: $color-white;
 	}
-	to{
-		opacity: 1;
-		transform: translateY(0px);
+
+	&__text {
+		margin-top: 1rem;
+		text-align: center;
+		max-height: 0;
+		overflow: hidden;
+		color: $color-white;
+		transition: max-height 0.5s;
+
+		p {
+			text-align: center;
+			color: $color-white;
+			font-size: 1.5rem;
+			// padding-top: 1rem;
+			line-height: 1.6;
+		}
+
+		span{
+			margin-bottom: 1rem;
+			font-size: 1.7rem	;
+			font-weight: bold;
+		}
+
+		&-list{
+			margin-top: 1rem;
+			text-align: center;
+			font-size: 1.5rem;;
+
+
+			.price-table{
+				border: 1px solid $color-contrast;
+				width: 50%;
+				margin: 1rem auto;
+				text-align: center;
+
+				th{
+					border-bottom: 1px solid white;
+				}
+			}
+		}
+
+		
+	}
+
+	&.active {
+		border-bottom: 2px solid $color-contrast;
+		.accordeon__title{
+			color: $color-contrast;
+		}
+		.accordeon__text{
+			max-height: 700px;
+			animation: fade 1s;
+		}
+
+		i{
+			transform: rotate(-180deg);
+			
+		}
+
+	}
+
+	i{
+		transition: transform 0.5s;
 	}
 }
+

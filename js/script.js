@@ -3,48 +3,46 @@ const logo = document.querySelector(".burger-menu__logo");
 
 const barsBtn = document.querySelector(".fa-bars");
 const xBtn = document.querySelector(".fa-times");
-const arrowDown = document.querySelectorAll(".fa-chevron-down");
-const arrowUp = document.querySelectorAll(".fa-chevron-up");
 
 const menuList = document.querySelector(".menuList");
 const menuItems = document.querySelectorAll("li a");
 const nav = document.querySelector("nav");
-const accordeon = document.querySelector(".accordeon");
-const accBtn = document.querySelectorAll(".accordeon__btn");
 
-const faqs = document.querySelectorAll('.faq')
-// function openAccordeonItems() {
+
+const accordeon = document.querySelectorAll('.accordeon')
+
+
+
+function openAccordeonItems() {
 	
-
+	if (this.classList.contains("active") ) {
+		this.classList.remove("active")
 	
-// 	if (this.nextElementSibling.classList.contains("active") ) {
-// 		this.nextElementSibling.classList.remove("active")
+	} else {
+		closeAccordeon();
+		this.classList.toggle("active");
+
+	}
 	
-// 	} else {
-// 		closeAccordeon();
-// 		this.nextElementSibling.classList.toggle("active");
+}
 
-// 	}
-	
-// }
+const closeAccordeon = () => {
+	const allActiveItems = document.querySelectorAll(".accordeon");
 
-// const closeAccordeon = () => {
-// 	const allActiveItems = document.querySelectorAll(".accordeon__box-info");
+	allActiveItems.forEach(item => item.classList.remove("active"));
+};
 
-// 	allActiveItems.forEach(item => item.classList.remove("active"));
-// };
+const clickOutside = e => {
+	if (
+		e.target.classList.contains("accordeon") ||
+		e.target.classList.contains("accordeon__title") ||
+		e.target.classList.contains("accordeon__text")
+	) {
+		return;
+	}
 
-// const clickOutside = e => {
-// 	if (
-// 		e.target.classList.contains("accordeon__btn") ||
-// 		e.target.classList.contains("accordeon__box-info") ||
-// 		e.target.classList.contains("info-text")
-// 	) {
-// 		return;
-// 	}
-
-// 	closeAccordeon();
-// };
+	closeAccordeon();
+};
 
 const handleNav = () => {
 	nav.classList.toggle("move", window.scrollY > 0);
@@ -63,12 +61,8 @@ const showMenu = () => {
 
 
 
-// accBtn.forEach(btn =>
-// 	btn.addEventListener("click", openAccordeonItems)
-// );
-faqs.forEach(faq => faq.addEventListener('click', () => {
-	faq.classList.toggle('active')
-}))
-// window.addEventListener("click", clickOutside);
+accordeon.forEach(acc => acc.addEventListener('click', openAccordeonItems
+))
+window.addEventListener("click", clickOutside);
 window.addEventListener("scroll", handleNav);
 menuBtn.addEventListener("click", showMenu);
