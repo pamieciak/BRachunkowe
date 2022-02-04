@@ -541,7 +541,7 @@ footer {
   height: 40px;
   font-size: 1.4rem;
   background: none;
-  border: transparent;
+  border: none;
   border-bottom: 1px solid white;
   color: white;
 }
