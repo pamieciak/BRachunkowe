@@ -551,6 +551,10 @@ footer {
   color: white;
 }
 
+.contact__form form select option {
+  color: #030001;
+}
+
 .contact__form form textarea {
   max-width: 80%;
   min-width: 80%;

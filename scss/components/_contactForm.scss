@@ -41,6 +41,10 @@
 			select {
 				text-align: center;
 				color: white;
+
+				option{
+					color: $color-bg;
+				}
 			}
 			textarea {
 				max-width: 80%;
