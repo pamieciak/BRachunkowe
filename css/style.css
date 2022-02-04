@@ -544,6 +544,7 @@ footer {
   border: none;
   border-bottom: 1px solid white;
   color: white;
+  border-radius: 0;
 }
 
 .contact__form form select {

@@ -23,7 +23,7 @@
 			input,
 			select,
 			textarea {
-                margin-bottom: 2rem;
+				margin-bottom: 2rem;
 				width: 80%;
 				height: 40px;
 				// padding: 0.6em;
@@ -34,15 +34,14 @@
 				border-bottom: 1px solid white;
 				color: white;
 
-				// border-radius: 8px;
+				border-radius: 0;
 			}
 
-	
 			select {
 				text-align: center;
 				color: white;
 
-				option{
+				option {
 					color: $color-bg;
 				}
 			}
@@ -64,13 +63,13 @@
 				font-size: 1.5rem;
 				background: none;
 				// background-color: #00838f;
-				
+
 				border: 2px solid $color-contrast;
 				// border-radius: 8px;
 				cursor: pointer;
 				transition: background-color 0.5s;
 
-				&:hover{
+				&:hover {
 					background-color: $color-contrast;
 				}
 			}
@@ -92,7 +91,7 @@
 			justify-content: center;
 			margin-top: 2rem;
 			// padding: 0rem rem;
-            width: 90%;
+			width: 90%;
 			// height: 60%;
 			border: 2px solid $color-white;
 			// // border-radius: 8px;
@@ -102,11 +101,11 @@
 				padding: 0rem 0.5rem;
 				font-size: 2rem;
 				text-decoration: none;
-				color: $color-contrast
+				color: $color-contrast;
 			}
 			p {
 				font-size: 1.4em;
-				color: $color-contrast
+				color: $color-contrast;
 			}
 			.mainp {
 				padding: 0.5em;
@@ -114,7 +113,7 @@
 				font-weight: bold;
 				color: $color-white;
 			}
-			
+
 			.pinfo {
 				margin-top: 1em;
 				padding: 0 1rem;
@@ -126,5 +125,4 @@
 			}
 		}
 	}
-
 }
