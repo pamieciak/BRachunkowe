@@ -30,8 +30,6 @@ body {
 }
 
 .sections {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #030001), color-stop(#412715), color-stop(#412715), to(#030001));
-  background-image: linear-gradient(#030001 5%, #412715, #412715, #030001);
   scroll-margin-top: 5rem;
 }
 
@@ -84,7 +82,7 @@ body {
     font-size: 5rem;
   }
   .nav .burger-menu__logo {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .menuList__item-link {
     font-size: 5rem;
@@ -135,6 +133,9 @@ body {
     margin: 0;
     bottom: 0;
   }
+  #contact .contact__form form label {
+    font-size: 1.8rem;
+  }
   #contact .contact__adress {
     width: 50%;
   }
@@ -142,6 +143,15 @@ body {
     margin: auto 0;
     width: 100%;
     height: 60%;
+  }
+}
+
+@media (min-width: 992px) {
+  #aboutus p {
+    margin: 0rem 4rem 0rem 4rem;
+    padding: 1rem 6rem;
+    font-size: 2rem;
+    text-align: center;
   }
 }
 
@@ -196,8 +206,6 @@ body {
 
 .aboutus {
   position: relative;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #030001), color-stop(#412715), color-stop(#412715), to(#030001));
-  background-image: linear-gradient(#030001 10%, #412715, #412715, #030001);
 }
 
 .aboutus__office-info {
@@ -355,12 +363,10 @@ footer {
 .language__circle {
   width: 40px;
   height: 40px;
-  border-radius: 40%;
   margin: 1em 1em;
   background-size: cover;
   background-position: center;
-  -webkit-box-shadow: 2px 2px 5px black;
-          box-shadow: 2px 2px 5px black;
+  border: 1px solid #030001;
   cursor: pointer;
 }
 
@@ -380,9 +386,9 @@ footer {
   margin: 3rem auto;
   margin-bottom: 1rem;
   width: 80%;
-  padding-bottom: 1rem;
+  padding-bottom: .5rem;
   font-size: 2rem;
-  border-bottom: 2px solid #fff;
+  border-bottom: 1px solid #fff;
   cursor: pointer;
   overflow: hidden;
 }
@@ -505,31 +511,36 @@ footer {
 
 .contact__form form label {
   font-size: 1.5rem;
-  margin: 0.5em 1em;
+  margin: 0.7rem 0.5rem;
   color: white;
 }
 
 .contact__form form input,
 .contact__form form select,
 .contact__form form textarea {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   width: 80%;
   height: 40px;
-  padding: 0.6em;
-  font-size: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.178);
-  border-radius: 8px;
+  font-size: 1.4rem;
+  background: none;
+  border: transparent;
+  border-bottom: 1px solid white;
+  color: white;
 }
 
 .contact__form form select {
   text-align: center;
+  color: white;
 }
 
 .contact__form form textarea {
   max-width: 80%;
   min-width: 80%;
+  padding: 0.6rem;
   width: 100%;
   min-height: 150px;
+  border: 1px solid white;
+  color: white;
 }
 
 .contact__form form button {
@@ -538,10 +549,15 @@ footer {
   padding: 0.75em 1em;
   color: white;
   font-size: 1.5rem;
-  background-color: #00838f;
-  border: none;
-  border-radius: 8px;
+  background: none;
+  border: 2px solid #00838F;
   cursor: pointer;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.contact__form form button:hover {
+  background-color: #00838F;
 }
 
 .contact__adress {
@@ -564,36 +580,47 @@ footer {
 }
 
 .contact__adress-info {
-  margin-top: 2em;
-  padding: 1rem 0rem 1rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
   width: 90%;
-  border: 1px solid rgba(0, 0, 0, 0.178);
-  border-radius: 8px;
-  background-color: white;
+  border: 2px solid #fff;
 }
 
 .contact__adress-info a {
   padding: 0rem 0.5rem;
   font-size: 2rem;
   text-decoration: none;
-  color: #4b122c;
+  color: #00838F;
 }
 
 .contact__adress-info p {
   font-size: 1.4em;
+  color: #00838F;
 }
 
 .contact__adress-info .mainp {
   padding: 0.5em;
   font-size: 1.4em;
   font-weight: bold;
+  color: #fff;
 }
 
 .contact__adress-info .pinfo {
   margin-top: 1em;
+  padding: 0 1rem;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 1.8rem;
   text-decoration: underline;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

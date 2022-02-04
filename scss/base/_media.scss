@@ -5,7 +5,7 @@
 	// Nawigacja
 	.nav {
 		.burger-menu__logo {
-			font-size: 3rem;
+			font-size: 2rem;
 		}
 	}
 	.menuList {
@@ -79,6 +79,10 @@
 					width: 100%;
 					margin: 0;
 					bottom: 0;
+
+					label{
+						font-size: 1.8rem;
+					}
 				}
 			}
 	
@@ -94,6 +98,13 @@
 	}
 }
 
-// @media (min-width: 992px) {
-// 	// musiałem nadac większą specyficzność poprzez ID
-// }
+@media (min-width: 992px) {
+	#aboutus {
+		p {
+			margin: 0rem 4rem 0rem 4rem;
+			padding: 1rem 6rem;
+			font-size: 2rem;
+			text-align: center;
+		}
+}
+}
